@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'store/css/base.css' %}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <a href="/"><img src="{% static 'store/images/bookstore.png' %}" alt="book store logo"></a>
+        </div>
+        <div>
+            <form class="search-form">
+                <input type="text" name="q" placeholder="Поиск книг..." required>
+                <button type="submit">Найти</button>
+            </form>
+
+        </div>
+    </div>
+
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
