@@ -13,16 +13,38 @@
         <div class="logo">
             <a href="/"><img src="{% static 'store/images/bookstore.png' %}" alt="book store logo"></a>
         </div>
-        <div>
-            <form class="search-form">
+
+        <div class="search-form">
+            <form>
                 <input type="text" name="q" placeholder="Поиск книг..." required>
                 <button type="submit">Найти</button>
             </form>
+        </div>
 
+        <div>
+            <p><a href="about/">About</a></p>
+        </div>
+
+        <div>
+            <p><a href="conract/">Contact</a></p>
+        </div>
+
+        <div class="logo">
+            <img src="{% static 'store/images/cart.png' %}" alt="cart"> <br>
+            <p>Cart</p>
+        </div>
+
+        <div class="logo">
+            <img src="{% static 'store/images/profile.png' %}" alt="profile"> <br>
+            <p>profile</p>
         </div>
     </div>
 
     {% block content %}
     {% endblock %}
+    <footer>
+    <p>&copy; 2025 Bookstore — Все права защищены</p>
+    </footer>
+
 </body>
 </html>

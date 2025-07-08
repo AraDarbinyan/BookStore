@@ -1,0 +1,48 @@
+{% extends "store/base.html" %}
+{% load static %}
+
+{% block title %}Contact{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'store/css/contact.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container" style="max-width: 600px; margin: 2rem auto;">
+  <h1>Contact Us</h1>
+  <p>
+    If you have any questions, feedback, or would like to get in touch, feel free to send us a message using the form below or write to our email.
+  </p>
+
+  <ul>
+    <li><strong>Email:</strong> <a href="mailto:info@bookstore.example.com">info@bookstore.example.com</a></li>
+    <li><strong>Phone:</strong> 1234-5678-9012</li>
+    <li><strong>Our social media:</strong></li>
+  </ul>
+
+  <nav class="media">
+    <ul>
+        <li><a href="https://www.instagram.com/"><img src="{% static 'store/images/socialmedia/Instagram.jpg' %}" alt="Instagram"></a></li>
+        <li><a href="https://www.facebook.com/"><img src="{% static 'store/images/socialmedia/Facebook.png' %}" alt="Facebook"></a></li>
+        <li><a href="https://youtube.com"><img src="{% static 'store/images/socialmedia/YouTube.webp' %}" alt="YouTube"></a></li>
+        <li><a href="https://x.com"><img src="{% static 'store/images/socialmedia/X.png' %}" alt="X"></a></li>
+        <li><a href="https://web.telegram.org/"><img src="{% static 'store/images/socialmedia/Telegram.png' %}" alt="Telegram"></a></li>
+        <li><a href="https://www.linkedin.com/"><img src="{% static 'store/images/socialmedia/Linkedin.png' %}" alt="Linkedin"></a></li>
+    </ul>
+</nav>
+
+  <h2>Send a Message</h2>
+  <form method="post">
+    <label for="name">Your Name:</label><br>
+    <input type="text" id="name" name="name"><br>
+
+    <label for="email">Your Email:</label><br>
+    <input type="email" id="email" name="email" ><br>
+
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="5" ></textarea><br>
+
+    <button type="submit">Send</button>
+  </form>
+</div>
+{% endblock %}

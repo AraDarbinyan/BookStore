@@ -1,0 +1,50 @@
+{% extends "store/base.html" %}
+{% load static %}
+
+{% block title %}About{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'store/css/about.css' %}">
+{% endblock %}
+
+
+{% block content %}
+<div class="about-container">
+  <h1>About Bookstore</h1>
+
+  <p>
+    Welcome to <strong>Bookstore</strong>, your friendly online destination for books that inspire, educate, and entertain.
+    Whether you're a lifelong reader or just starting your journey into literature, we aim to provide a rich selection
+    for every taste and interest.
+  </p>
+
+  <h2 class="mt-4">Our Mission</h2>
+  <p>
+    At Bookstore, we believe that books have the power to change lives. Our mission is to make quality literature
+    accessible and affordable to everyone, everywhere. We carefully curate our catalog to include a diverse range
+    of genres, from timeless classics and modern fiction to children's books and non-fiction works.
+  </p>
+
+  <h2 class="mt-4">What We Offer</h2>
+  <ul>
+    <li>📚 A growing collection of books across various genres and categories</li>
+    <li>🚀 Fast and reliable shipping (demo only – this is a student project!)</li>
+    <li>⭐ Honest reviews and ratings from real readers</li>
+    <li>🔍 Easy browsing and powerful search functionality</li>
+    <li>❤️ Friendly customer support and user-friendly design</li>
+  </ul>
+
+  <h2 class="mt-4">Who We Are</h2>
+  <p>
+    Bookstore is a demo project developed by a junior Python/Django developer to demonstrate skills in web development.
+    It is not a commercial site, but a functional simulation of a real e-commerce bookstore. The project includes
+    key features like product management, shopping cart, checkout system, and user authentication.
+  </p>
+
+  <p>
+    This project was built using <strong>Python</strong>, <strong>HTML/CSS</strong>, and <strong>Django</strong>, with a focus on clean design,
+    usability, and code quality.
+  </p>
+
+</div>
+{% endblock %}
