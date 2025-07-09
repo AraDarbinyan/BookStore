@@ -1,0 +1,1602 @@
+[
+  {
+    "model": "store.book",
+    "pk": 1,
+    "fields": {
+      "title": "Beyond the Horizon 1",
+      "description": "A heartwarming story of hope and courage.",
+      "isbn": "9788694266011",
+      "publisher": "Orbit",
+      "year_published": 1863,
+      "price": "344.00",
+      "stock": 35,
+      "authors": [
+        24
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 2,
+    "fields": {
+      "title": "Ashes and Flame 2",
+      "description": "A gripping tale of love and betrayal.",
+      "isbn": "9782354369208",
+      "publisher": "Simon & Schuster",
+      "year_published": 2019,
+      "price": "755.00",
+      "stock": 44,
+      "authors": [
+        16
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 3,
+    "fields": {
+      "title": "Ashes and Flame 3",
+      "description": "An epic fantasy adventure.",
+      "isbn": "9788812368916",
+      "publisher": "Macmillan",
+      "year_published": 2018,
+      "price": "184.00",
+      "stock": 15,
+      "authors": [
+        5
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 4,
+    "fields": {
+      "title": "Ashes and Flame 4",
+      "description": "A deep dive into the human psyche.",
+      "isbn": "9785910009887",
+      "publisher": "Random House",
+      "year_published": 1934,
+      "price": "643.00",
+      "stock": 15,
+      "authors": [
+        18
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 5,
+    "fields": {
+      "title": "Dreams of Steel 5",
+      "description": "A deep dive into the human psyche.",
+      "isbn": "9786956632955",
+      "publisher": "Random House",
+      "year_published": 1986,
+      "price": "851.00",
+      "stock": 17,
+      "authors": [
+        28
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 6,
+    "fields": {
+      "title": "In the Shadow of Giants 6",
+      "description": "A journey through a dystopian world.",
+      "isbn": "9784173532261",
+      "publisher": "Macmillan",
+      "year_published": 1861,
+      "price": "862.00",
+      "stock": 29,
+      "authors": [
+        19
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 7,
+    "fields": {
+      "title": "Dreams of Steel 7",
+      "description": "A deep dive into the human psyche.",
+      "isbn": "9783393880838",
+      "publisher": "Simon & Schuster",
+      "year_published": 1953,
+      "price": "688.00",
+      "stock": 41,
+      "authors": [
+        13
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 8,
+    "fields": {
+      "title": "Through the Mist 8",
+      "description": "An epic fantasy adventure.",
+      "isbn": "9784297492307",
+      "publisher": "Tor store",
+      "year_published": 1963,
+      "price": "916.00",
+      "stock": 7,
+      "authors": [
+        12
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 9,
+    "fields": {
+      "title": "Ashes and Flame 9",
+      "description": "An epic fantasy adventure.",
+      "isbn": "9785485268319",
+      "publisher": "Simon & Schuster",
+      "year_published": 1922,
+      "price": "661.00",
+      "stock": 31,
+      "authors": [
+        23
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 10,
+    "fields": {
+      "title": "City of Glass 10",
+      "description": "A journey through a dystopian world.",
+      "isbn": "9783139675394",
+      "publisher": "Vintage",
+      "year_published": 1916,
+      "price": "631.00",
+      "stock": 47,
+      "authors": [
+        28
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 11,
+    "fields": {
+      "title": "The Nameless God 11",
+      "description": "A thrilling science fiction saga.",
+      "isbn": "9785732974329",
+      "publisher": "Penguin",
+      "year_published": 1854,
+      "price": "644.00",
+      "stock": 40,
+      "authors": [
+        14
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 12,
+    "fields": {
+      "title": "River of Bones 12",
+      "description": "A journey through a dystopian world.",
+      "isbn": "9789462685621",
+      "publisher": "Scholastic",
+      "year_published": 1964,
+      "price": "772.00",
+      "stock": 12,
+      "authors": [
+        7
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 13,
+    "fields": {
+      "title": "Whispers in the Dark 13",
+      "description": "An epic fantasy adventure.",
+      "isbn": "9786233123670",
+      "publisher": "Simon & Schuster",
+      "year_published": 1850,
+      "price": "884.00",
+      "stock": 5,
+      "authors": [
+        10
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 14,
+    "fields": {
+      "title": "The Nameless God 14",
+      "description": "A thrilling science fiction saga.",
+      "isbn": "9782761707714",
+      "publisher": "Macmillan",
+      "year_published": 1988,
+      "price": "897.00",
+      "stock": 48,
+      "authors": [
+        4
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 15,
+    "fields": {
+      "title": "The Silent Watcher 15",
+      "description": "An epic fantasy adventure.",
+      "isbn": "9787700124768",
+      "publisher": "Simon & Schuster",
+      "year_published": 1914,
+      "price": "476.00",
+      "stock": 18,
+      "authors": [
+        21
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 16,
+    "fields": {
+      "title": "River of Bones 16",
+      "description": "A mystery set in the heart of London.",
+      "isbn": "9786454121575",
+      "publisher": "Hachette",
+      "year_published": 1938,
+      "price": "412.00",
+      "stock": 43,
+      "authors": [
+        13
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 17,
+    "fields": {
+      "title": "Ashes and Flame 17",
+      "description": "A deep dive into the human psyche.",
+      "isbn": "9784453065319",
+      "publisher": "Simon & Schuster",
+      "year_published": 1919,
+      "price": "332.00",
+      "stock": 23,
+      "authors": [
+        20
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 18,
+    "fields": {
+      "title": "River of Bones 18",
+      "description": "A mystery set in the heart of London.",
+      "isbn": "9782975365028",
+      "publisher": "Hachette",
+      "year_published": 1985,
+      "price": "837.00",
+      "stock": 31,
+      "authors": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 19,
+    "fields": {
+      "title": "Echoes of the Past 19",
+      "description": "An epic fantasy adventure.",
+      "isbn": "9782008403520",
+      "publisher": "HarperCollins",
+      "year_published": 1904,
+      "price": "234.00",
+      "stock": 6,
+      "authors": [
+        21
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 20,
+    "fields": {
+      "title": "Beyond the Horizon 20",
+      "description": "A deep dive into the human psyche.",
+      "isbn": "9786881745416",
+      "publisher": "Vintage",
+      "year_published": 1862,
+      "price": "704.00",
+      "stock": 20,
+      "authors": [
+        16
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 21,
+    "fields": {
+      "title": "The Edge of Reason 21",
+      "description": "A gripping tale of love and betrayal.",
+      "isbn": "9789550767753",
+      "publisher": "HarperCollins",
+      "year_published": 1864,
+      "price": "250.00",
+      "stock": 16,
+      "authors": [
+        7
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 22,
+    "fields": {
+      "title": "River of Bones 22",
+      "description": "A thrilling science fiction saga.",
+      "isbn": "9784290983458",
+      "publisher": "Tor store",
+      "year_published": 1907,
+      "price": "149.00",
+      "stock": 12,
+      "authors": [
+        21
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 23,
+    "fields": {
+      "title": "The Nameless God 23",
+      "description": "A philosophical exploration of existence.",
+      "isbn": "9789612741258",
+      "publisher": "Random House",
+      "year_published": 1945,
+      "price": "744.00",
+      "stock": 7,
+      "authors": [
+        29
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 24,
+    "fields": {
+      "title": "In the Shadow of Giants 24",
+      "description": "A mystery set in the heart of London.",
+      "isbn": "9788907902491",
+      "publisher": "Macmillan",
+      "year_published": 2017,
+      "price": "110.00",
+      "stock": 11,
+      "authors": [
+        16
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 25,
+    "fields": {
+      "title": "The Iron Curtain 25",
+      "description": "A heartwarming story of hope and courage.",
+      "isbn": "9783969363351",
+      "publisher": "Random House",
+      "year_published": 1933,
+      "price": "384.00",
+      "stock": 25,
+      "authors": [
+        7
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 26,
+    "fields": {
+      "title": "Fragments of Time 26",
+      "description": "A story about survival in a broken world.",
+      "isbn": "9782226665339",
+      "publisher": "Random House",
+      "year_published": 1926,
+      "price": "383.00",
+      "stock": 21,
+      "authors": [
+        27
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 27,
+    "fields": {
+      "title": "Beyond the Horizon 27",
+      "description": "A story about survival in a broken world.",
+      "isbn": "9787316761775",
+      "publisher": "HarperCollins",
+      "year_published": 1989,
+      "price": "822.00",
+      "stock": 24,
+      "authors": [
+        8
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 28,
+    "fields": {
+      "title": "River of Bones 28",
+      "description": "A deep dive into the human psyche.",
+      "isbn": "9784092800092",
+      "publisher": "Orbit",
+      "year_published": 1929,
+      "price": "677.00",
+      "stock": 22,
+      "authors": [
+        10
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 29,
+    "fields": {
+      "title": "Whispers in the Dark 29",
+      "description": "A story about survival in a broken world.",
+      "isbn": "9788982464486",
+      "publisher": "Random House",
+      "year_published": 1899,
+      "price": "634.00",
+      "stock": 25,
+      "authors": [
+        15
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 30,
+    "fields": {
+      "title": "Voices Below 30",
+      "description": "A mystery set in the heart of London.",
+      "isbn": "9783427251091",
+      "publisher": "Penguin",
+      "year_published": 1855,
+      "price": "185.00",
+      "stock": 39,
+      "authors": [
+        17
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 31,
+    "fields": {
+      "title": "Labyrinth of Lies 31",
+      "description": "A gripping tale of love and betrayal.",
+      "isbn": "9784772213435",
+      "publisher": "HarperCollins",
+      "year_published": 1963,
+      "price": "688.00",
+      "stock": 47,
+      "authors": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 32,
+    "fields": {
+      "title": "Beyond the Horizon 32",
+      "description": "An epic fantasy adventure.",
+      "isbn": "9787068927504",
+      "publisher": "Vintage",
+      "year_published": 1866,
+      "price": "242.00",
+      "stock": 31,
+      "authors": [
+        29
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 33,
+    "fields": {
+      "title": "Kingdom of Dust 33",
+      "description": "A deep dive into the human psyche.",
+      "isbn": "9788633199719",
+      "publisher": "HarperCollins",
+      "year_published": 1874,
+      "price": "713.00",
+      "stock": 16,
+      "authors": [
+        4
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 34,
+    "fields": {
+      "title": "Whispers in the Dark 34",
+      "description": "A heartwarming story of hope and courage.",
+      "isbn": "9785312801107",
+      "publisher": "Random House",
+      "year_published": 1880,
+      "price": "136.00",
+      "stock": 30,
+      "authors": [
+        21
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 35,
+    "fields": {
+      "title": "Labyrinth of Lies 35",
+      "description": "A philosophical exploration of existence.",
+      "isbn": "9782396896223",
+      "publisher": "Random House",
+      "year_published": 1906,
+      "price": "701.00",
+      "stock": 28,
+      "authors": [
+        18
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 36,
+    "fields": {
+      "title": "Whispers in the Dark 36",
+      "description": "A mystery set in the heart of London.",
+      "isbn": "9789490461681",
+      "publisher": "Hachette",
+      "year_published": 1996,
+      "price": "767.00",
+      "stock": 42,
+      "authors": [
+        29
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 37,
+    "fields": {
+      "title": "Through the Mist 37",
+      "description": "A philosophical exploration of existence.",
+      "isbn": "9786233348399",
+      "publisher": "Orbit",
+      "year_published": 1879,
+      "price": "589.00",
+      "stock": 45,
+      "authors": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 38,
+    "fields": {
+      "title": "The Edge of Reason 38",
+      "description": "An epic fantasy adventure.",
+      "isbn": "9783025565324",
+      "publisher": "Macmillan",
+      "year_published": 1895,
+      "price": "846.00",
+      "stock": 30,
+      "authors": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 39,
+    "fields": {
+      "title": "The Edge of Reason 39",
+      "description": "A heartwarming story of hope and courage.",
+      "isbn": "9788032227613",
+      "publisher": "Orbit",
+      "year_published": 1960,
+      "price": "806.00",
+      "stock": 35,
+      "authors": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 40,
+    "fields": {
+      "title": "The Edge of Reason 40",
+      "description": "A haunting look into a forgotten past.",
+      "isbn": "9788470752817",
+      "publisher": "Scholastic",
+      "year_published": 1932,
+      "price": "221.00",
+      "stock": 19,
+      "authors": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 41,
+    "fields": {
+      "title": "Beyond the Horizon 41",
+      "description": "A heartwarming story of hope and courage.",
+      "isbn": "9788136955097",
+      "publisher": "Tor store",
+      "year_published": 1999,
+      "price": "824.00",
+      "stock": 12,
+      "authors": [
+        8
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 42,
+    "fields": {
+      "title": "The Starborn Legacy 42",
+      "description": "A heartwarming story of hope and courage.",
+      "isbn": "9785091032198",
+      "publisher": "Scholastic",
+      "year_published": 1931,
+      "price": "632.00",
+      "stock": 34,
+      "authors": [
+        13
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 43,
+    "fields": {
+      "title": "The Iron Curtain 43",
+      "description": "A story about survival in a broken world.",
+      "isbn": "9785128235324",
+      "publisher": "Vintage",
+      "year_published": 1941,
+      "price": "384.00",
+      "stock": 42,
+      "authors": [
+        23
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 44,
+    "fields": {
+      "title": "Dreams of Steel 44",
+      "description": "A philosophical exploration of existence.",
+      "isbn": "9781499479075",
+      "publisher": "Hachette",
+      "year_published": 1875,
+      "price": "943.00",
+      "stock": 23,
+      "authors": [
+        10
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 45,
+    "fields": {
+      "title": "Tales of the Forgotten 45",
+      "description": "An epic fantasy adventure.",
+      "isbn": "9785371229534",
+      "publisher": "Orbit",
+      "year_published": 2007,
+      "price": "514.00",
+      "stock": 10,
+      "authors": [
+        17
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 46,
+    "fields": {
+      "title": "Tales of the Forgotten 46",
+      "description": "A journey through a dystopian world.",
+      "isbn": "9782030697066",
+      "publisher": "Hachette",
+      "year_published": 1988,
+      "price": "781.00",
+      "stock": 20,
+      "authors": [
+        6
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 47,
+    "fields": {
+      "title": "The Nameless God 47",
+      "description": "A philosophical exploration of existence.",
+      "isbn": "9784257260680",
+      "publisher": "Macmillan",
+      "year_published": 1905,
+      "price": "391.00",
+      "stock": 8,
+      "authors": [
+        17
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 48,
+    "fields": {
+      "title": "The Edge of Reason 48",
+      "description": "A heartwarming story of hope and courage.",
+      "isbn": "9781421374268",
+      "publisher": "Vintage",
+      "year_published": 1998,
+      "price": "235.00",
+      "stock": 25,
+      "authors": [
+        17
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 49,
+    "fields": {
+      "title": "Kingdom of Dust 49",
+      "description": "A mystery set in the heart of London.",
+      "isbn": "9781417207561",
+      "publisher": "Penguin",
+      "year_published": 1993,
+      "price": "722.00",
+      "stock": 42,
+      "authors": [
+        20
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 50,
+    "fields": {
+      "title": "Labyrinth of Lies 50",
+      "description": "An epic fantasy adventure.",
+      "isbn": "9784242855031",
+      "publisher": "Hachette",
+      "year_published": 2015,
+      "price": "387.00",
+      "stock": 25,
+      "authors": [
+        16
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 51,
+    "fields": {
+      "title": "City of Glass 51",
+      "description": "A journey through a dystopian world.",
+      "isbn": "9787173639960",
+      "publisher": "Random House",
+      "year_published": 1963,
+      "price": "463.00",
+      "stock": 14,
+      "authors": [
+        14
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 52,
+    "fields": {
+      "title": "River of Bones 52",
+      "description": "A story about survival in a broken world.",
+      "isbn": "9787442069341",
+      "publisher": "HarperCollins",
+      "year_published": 1897,
+      "price": "999.00",
+      "stock": 8,
+      "authors": [
+        23
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 53,
+    "fields": {
+      "title": "Labyrinth of Lies 53",
+      "description": "A journey through a dystopian world.",
+      "isbn": "9783851577843",
+      "publisher": "Macmillan",
+      "year_published": 1969,
+      "price": "173.00",
+      "stock": 17,
+      "authors": [
+        28
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 54,
+    "fields": {
+      "title": "Beyond the Horizon 54",
+      "description": "A philosophical exploration of existence.",
+      "isbn": "9789230576484",
+      "publisher": "Hachette",
+      "year_published": 1852,
+      "price": "262.00",
+      "stock": 8,
+      "authors": [
+        3
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 55,
+    "fields": {
+      "title": "Through the Mist 55",
+      "description": "A story about survival in a broken world.",
+      "isbn": "9786311226471",
+      "publisher": "HarperCollins",
+      "year_published": 2010,
+      "price": "416.00",
+      "stock": 20,
+      "authors": [
+        12
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 56,
+    "fields": {
+      "title": "Dreams of Steel 56",
+      "description": "A haunting look into a forgotten past.",
+      "isbn": "9787121710944",
+      "publisher": "Hachette",
+      "year_published": 1928,
+      "price": "112.00",
+      "stock": 47,
+      "authors": [
+        19
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 57,
+    "fields": {
+      "title": "Labyrinth of Lies 57",
+      "description": "A thrilling science fiction saga.",
+      "isbn": "9785983405213",
+      "publisher": "Scholastic",
+      "year_published": 1934,
+      "price": "723.00",
+      "stock": 6,
+      "authors": [
+        18
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 58,
+    "fields": {
+      "title": "Kingdom of Dust 58",
+      "description": "A haunting look into a forgotten past.",
+      "isbn": "9784781744026",
+      "publisher": "HarperCollins",
+      "year_published": 1871,
+      "price": "767.00",
+      "stock": 6,
+      "authors": [
+        29
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 59,
+    "fields": {
+      "title": "Beyond the Horizon 59",
+      "description": "A mystery set in the heart of London.",
+      "isbn": "9781635394998",
+      "publisher": "Scholastic",
+      "year_published": 1965,
+      "price": "916.00",
+      "stock": 48,
+      "authors": [
+        24
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 60,
+    "fields": {
+      "title": "Through the Mist 60",
+      "description": "A haunting look into a forgotten past.",
+      "isbn": "9789942066452",
+      "publisher": "Scholastic",
+      "year_published": 1881,
+      "price": "547.00",
+      "stock": 47,
+      "authors": [
+        30
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 61,
+    "fields": {
+      "title": "Whispers in the Dark 61",
+      "description": "A journey through a dystopian world.",
+      "isbn": "9787146588076",
+      "publisher": "Macmillan",
+      "year_published": 1897,
+      "price": "834.00",
+      "stock": 9,
+      "authors": [
+        27
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 62,
+    "fields": {
+      "title": "Voices Below 62",
+      "description": "A deep dive into the human psyche.",
+      "isbn": "9784427982394",
+      "publisher": "Hachette",
+      "year_published": 1862,
+      "price": "443.00",
+      "stock": 47,
+      "authors": [
+        16
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 63,
+    "fields": {
+      "title": "Voices Below 63",
+      "description": "A heartwarming story of hope and courage.",
+      "isbn": "9785895325594",
+      "publisher": "Macmillan",
+      "year_published": 1967,
+      "price": "366.00",
+      "stock": 24,
+      "authors": [
+        13
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 64,
+    "fields": {
+      "title": "Voices Below 64",
+      "description": "A philosophical exploration of existence.",
+      "isbn": "9782055113050",
+      "publisher": "Scholastic",
+      "year_published": 1998,
+      "price": "556.00",
+      "stock": 26,
+      "authors": [
+        23
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 65,
+    "fields": {
+      "title": "Kingdom of Dust 65",
+      "description": "A journey through a dystopian world.",
+      "isbn": "9783978427247",
+      "publisher": "Vintage",
+      "year_published": 2012,
+      "price": "465.00",
+      "stock": 47,
+      "authors": [
+        7
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 66,
+    "fields": {
+      "title": "In the Shadow of Giants 66",
+      "description": "An epic fantasy adventure.",
+      "isbn": "9788022137830",
+      "publisher": "Scholastic",
+      "year_published": 1986,
+      "price": "336.00",
+      "stock": 37,
+      "authors": [
+        26
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 67,
+    "fields": {
+      "title": "The Silent Watcher 67",
+      "description": "An epic fantasy adventure.",
+      "isbn": "9788005214724",
+      "publisher": "Simon & Schuster",
+      "year_published": 1991,
+      "price": "714.00",
+      "stock": 31,
+      "authors": [
+        26
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 68,
+    "fields": {
+      "title": "The Starborn Legacy 68",
+      "description": "A story about survival in a broken world.",
+      "isbn": "9787688429599",
+      "publisher": "Random House",
+      "year_published": 1880,
+      "price": "666.00",
+      "stock": 13,
+      "authors": [
+        19
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 69,
+    "fields": {
+      "title": "Tales of the Forgotten 69",
+      "description": "A story about survival in a broken world.",
+      "isbn": "9782792400835",
+      "publisher": "Simon & Schuster",
+      "year_published": 1985,
+      "price": "802.00",
+      "stock": 46,
+      "authors": [
+        26
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 70,
+    "fields": {
+      "title": "The Iron Curtain 70",
+      "description": "A journey through a dystopian world.",
+      "isbn": "9784868560812",
+      "publisher": "Orbit",
+      "year_published": 1950,
+      "price": "111.00",
+      "stock": 26,
+      "authors": [
+        16
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 71,
+    "fields": {
+      "title": "Beyond the Horizon 71",
+      "description": "An epic fantasy adventure.",
+      "isbn": "9781103199059",
+      "publisher": "Tor store",
+      "year_published": 1958,
+      "price": "426.00",
+      "stock": 19,
+      "authors": [
+        20
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 72,
+    "fields": {
+      "title": "River of Bones 72",
+      "description": "A heartwarming story of hope and courage.",
+      "isbn": "9786451539237",
+      "publisher": "Vintage",
+      "year_published": 1972,
+      "price": "276.00",
+      "stock": 33,
+      "authors": [
+        17
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 73,
+    "fields": {
+      "title": "The Iron Curtain 73",
+      "description": "A gripping tale of love and betrayal.",
+      "isbn": "9782210573800",
+      "publisher": "Orbit",
+      "year_published": 1913,
+      "price": "673.00",
+      "stock": 28,
+      "authors": [
+        17
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 74,
+    "fields": {
+      "title": "The Silent Watcher 74",
+      "description": "A journey through a dystopian world.",
+      "isbn": "9788797840141",
+      "publisher": "Orbit",
+      "year_published": 1911,
+      "price": "866.00",
+      "stock": 45,
+      "authors": [
+        27
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 75,
+    "fields": {
+      "title": "River of Bones 75",
+      "description": "A mystery set in the heart of London.",
+      "isbn": "9781123757777",
+      "publisher": "Scholastic",
+      "year_published": 1872,
+      "price": "548.00",
+      "stock": 9,
+      "authors": [
+        15
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 76,
+    "fields": {
+      "title": "The Silent Watcher 76",
+      "description": "A philosophical exploration of existence.",
+      "isbn": "9782688180343",
+      "publisher": "Simon & Schuster",
+      "year_published": 1905,
+      "price": "365.00",
+      "stock": 25,
+      "authors": [
+        26
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 77,
+    "fields": {
+      "title": "Fragments of Time 77",
+      "description": "A heartwarming story of hope and courage.",
+      "isbn": "9789100244716",
+      "publisher": "Penguin",
+      "year_published": 2001,
+      "price": "354.00",
+      "stock": 32,
+      "authors": [
+        11
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 78,
+    "fields": {
+      "title": "Whispers in the Dark 78",
+      "description": "A mystery set in the heart of London.",
+      "isbn": "9789861475903",
+      "publisher": "Scholastic",
+      "year_published": 1920,
+      "price": "314.00",
+      "stock": 25,
+      "authors": [
+        13
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 79,
+    "fields": {
+      "title": "Voices Below 79",
+      "description": "A thrilling science fiction saga.",
+      "isbn": "9789383800676",
+      "publisher": "Penguin",
+      "year_published": 1984,
+      "price": "957.00",
+      "stock": 37,
+      "authors": [
+        6
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 80,
+    "fields": {
+      "title": "The Edge of Reason 80",
+      "description": "A heartwarming story of hope and courage.",
+      "isbn": "9781328538815",
+      "publisher": "Orbit",
+      "year_published": 1898,
+      "price": "376.00",
+      "stock": 10,
+      "authors": [
+        14
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 81,
+    "fields": {
+      "title": "The Nameless God 81",
+      "description": "A thrilling science fiction saga.",
+      "isbn": "9787664992326",
+      "publisher": "Macmillan",
+      "year_published": 1977,
+      "price": "293.00",
+      "stock": 14,
+      "authors": [
+        14
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 82,
+    "fields": {
+      "title": "Beyond the Horizon 82",
+      "description": "A journey through a dystopian world.",
+      "isbn": "9784451169831",
+      "publisher": "Macmillan",
+      "year_published": 1952,
+      "price": "767.00",
+      "stock": 34,
+      "authors": [
+        8
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 83,
+    "fields": {
+      "title": "Kingdom of Dust 83",
+      "description": "A journey through a dystopian world.",
+      "isbn": "9784591917573",
+      "publisher": "HarperCollins",
+      "year_published": 1904,
+      "price": "203.00",
+      "stock": 30,
+      "authors": [
+        10
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 84,
+    "fields": {
+      "title": "Dreams of Steel 84",
+      "description": "A heartwarming story of hope and courage.",
+      "isbn": "9782597681502",
+      "publisher": "HarperCollins",
+      "year_published": 2012,
+      "price": "476.00",
+      "stock": 40,
+      "authors": [
+        3
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 85,
+    "fields": {
+      "title": "River of Bones 85",
+      "description": "A philosophical exploration of existence.",
+      "isbn": "9781466993442",
+      "publisher": "Scholastic",
+      "year_published": 1909,
+      "price": "941.00",
+      "stock": 50,
+      "authors": [
+        4
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 86,
+    "fields": {
+      "title": "Through the Mist 86",
+      "description": "A haunting look into a forgotten past.",
+      "isbn": "9783314165565",
+      "publisher": "HarperCollins",
+      "year_published": 1868,
+      "price": "851.00",
+      "stock": 38,
+      "authors": [
+        28
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 87,
+    "fields": {
+      "title": "The Last Empire 87",
+      "description": "A philosophical exploration of existence.",
+      "isbn": "9783559382876",
+      "publisher": "Orbit",
+      "year_published": 1941,
+      "price": "917.00",
+      "stock": 33,
+      "authors": [
+        23
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 88,
+    "fields": {
+      "title": "The Silent Watcher 88",
+      "description": "A journey through a dystopian world.",
+      "isbn": "9782236370485",
+      "publisher": "Hachette",
+      "year_published": 2017,
+      "price": "395.00",
+      "stock": 36,
+      "authors": [
+        18
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 89,
+    "fields": {
+      "title": "The Last Empire 89",
+      "description": "A deep dive into the human psyche.",
+      "isbn": "9785409613689",
+      "publisher": "Vintage",
+      "year_published": 1996,
+      "price": "984.00",
+      "stock": 39,
+      "authors": [
+        16
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 90,
+    "fields": {
+      "title": "In the Shadow of Giants 90",
+      "description": "A thrilling science fiction saga.",
+      "isbn": "9787325686507",
+      "publisher": "Macmillan",
+      "year_published": 2012,
+      "price": "771.00",
+      "stock": 39,
+      "authors": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 91,
+    "fields": {
+      "title": "The Silent Watcher 91",
+      "description": "A story about survival in a broken world.",
+      "isbn": "9787617519739",
+      "publisher": "Simon & Schuster",
+      "year_published": 1963,
+      "price": "211.00",
+      "stock": 42,
+      "authors": [
+        29
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 92,
+    "fields": {
+      "title": "The Silent Watcher 92",
+      "description": "An epic fantasy adventure.",
+      "isbn": "9787485456756",
+      "publisher": "Scholastic",
+      "year_published": 2003,
+      "price": "533.00",
+      "stock": 43,
+      "authors": [
+        6
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 93,
+    "fields": {
+      "title": "The Iron Curtain 93",
+      "description": "A journey through a dystopian world.",
+      "isbn": "9783609463518",
+      "publisher": "Hachette",
+      "year_published": 1852,
+      "price": "661.00",
+      "stock": 22,
+      "authors": [
+        11
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 94,
+    "fields": {
+      "title": "Beyond the Horizon 94",
+      "description": "An epic fantasy adventure.",
+      "isbn": "9788610360992",
+      "publisher": "Hachette",
+      "year_published": 2002,
+      "price": "377.00",
+      "stock": 33,
+      "authors": [
+        13
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 95,
+    "fields": {
+      "title": "Beyond the Horizon 95",
+      "description": "A story about survival in a broken world.",
+      "isbn": "9784185227968",
+      "publisher": "Scholastic",
+      "year_published": 1894,
+      "price": "127.00",
+      "stock": 46,
+      "authors": [
+        24
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 96,
+    "fields": {
+      "title": "The Edge of Reason 96",
+      "description": "An epic fantasy adventure.",
+      "isbn": "9784130186937",
+      "publisher": "Tor store",
+      "year_published": 1877,
+      "price": "880.00",
+      "stock": 46,
+      "authors": [
+        23
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 97,
+    "fields": {
+      "title": "The Last Empire 97",
+      "description": "A gripping tale of love and betrayal.",
+      "isbn": "9786502319197",
+      "publisher": "Simon & Schuster",
+      "year_published": 1990,
+      "price": "887.00",
+      "stock": 49,
+      "authors": [
+        4
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 98,
+    "fields": {
+      "title": "The Starborn Legacy 98",
+      "description": "An epic fantasy adventure.",
+      "isbn": "9786335659871",
+      "publisher": "Orbit",
+      "year_published": 1955,
+      "price": "520.00",
+      "stock": 32,
+      "authors": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 99,
+    "fields": {
+      "title": "The Edge of Reason 99",
+      "description": "A deep dive into the human psyche.",
+      "isbn": "9787553491674",
+      "publisher": "Simon & Schuster",
+      "year_published": 2014,
+      "price": "655.00",
+      "stock": 10,
+      "authors": [
+        17
+      ]
+    }
+  },
+  {
+    "model": "store.book",
+    "pk": 100,
+    "fields": {
+      "title": "The Last Empire 100",
+      "description": "A thrilling science fiction saga.",
+      "isbn": "9786608760259",
+      "publisher": "Tor store",
+      "year_published": 2010,
+      "price": "210.00",
+      "stock": 18,
+      "authors": [
+        29
+      ]
+    }
+  }
+]

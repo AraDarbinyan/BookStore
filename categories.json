@@ -1,0 +1,17 @@
+[
+  { "model": "store.category", "pk": 1, "fields": { "name": "Fiction", "slug": "fiction" } },
+  { "model": "store.category", "pk": 2, "fields": { "name": "Non-fiction", "slug": "non-fiction" } },
+  { "model": "store.category", "pk": 3, "fields": { "name": "Fantasy", "slug": "fantasy" } },
+  { "model": "store.category", "pk": 4, "fields": { "name": "Science Fiction", "slug": "sci-fi" } },
+  { "model": "store.category", "pk": 5, "fields": { "name": "Mystery & Thriller", "slug": "mystery-thriller" } },
+  { "model": "store.category", "pk": 6, "fields": { "name": "Romance", "slug": "romance" } },
+  { "model": "store.category", "pk": 7, "fields": { "name": "Children", "slug": "children" } },
+  { "model": "store.category", "pk": 8, "fields": { "name": "Young Adult", "slug": "young-adult" } },
+  { "model": "store.category", "pk": 9, "fields": { "name": "History", "slug": "history" } },
+  { "model": "store.category", "pk": 10, "fields": { "name": "Science & Technology", "slug": "science-tech" } },
+  { "model": "store.category", "pk": 11, "fields": { "name": "Self-help", "slug": "self-help" } },
+  { "model": "store.category", "pk": 12, "fields": { "name": "Business & Finance", "slug": "business-finance" } },
+  { "model": "store.category", "pk": 13, "fields": { "name": "Art & Photography", "slug": "art-photo" } },
+  { "model": "store.category", "pk": 14, "fields": { "name": "Comics & Graphic Novels", "slug": "comics-graphic" } },
+  { "model": "store.category", "pk": 15, "fields": { "name": "Religion & Spirituality", "slug": "religion-spirituality" } }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "model": "store.author",
+    "pk": 1,
+    "fields": {
+      "name": "George Orwell",
+      "biography": "English writer and publicist.",
+      "date_of_birth": "1903-06-25",
+      "date_of_death": "1950-01-21"
+    }
+  },
+  {
+    "model": "store.author",
+    "pk": 2,
+    "fields": {
+      "name": "Ray Bradbury",
+      "biography": "American science fiction writer.",
+      "date_of_birth": "1920-08-22",
+      "date_of_death": "2012-06-05"
+    }
+  },
+  {
+    "model": "store.author",
+    "pk": 3,
+    "fields": {
+      "name": "Jane Austen",
+      "biography": "English novelist known for her romantic fiction.",
+      "date_of_birth": "1775-12-16",
+      "date_of_death": "1817-07-18"
+    }
+  },
+  {
+    "model": "store.author",
+    "pk": 4,
+    "fields": {
+      "name": "Mark Twain",
+      "biography": "American writer and humorist.",
+      "date_of_birth": "1835-11-30",
+      "date_of_death": "1910-04-21"
+    }
+  },
+  {
+    "model": "store.author",
+    "pk": 5,
+    "fields": {
+      "name": "Agatha Christie",
+      "biography": "British writer known for her detective novels.",
+      "date_of_birth": "1890-09-15",
+      "date_of_death": "1976-01-12"
+    }
+  },
+  {
+    "model": "store.author",
+    "pk": 6,
+    "fields": {
+      "name": "Ernest Hemingway",
+      "biography": "American novelist and short story writer.",
+      "date_of_birth": "1899-07-21",
+      "date_of_death": "1961-07-02"
+    }
+  },
+  {
+    "model": "store.author",
+    "pk": 7,
+    "fields": {
+      "name": "J.K. Rowling",
+      "biography": "British author of the Harry Potter series.",
+      "date_of_birth": "1965-07-31",
+      "date_of_death": null
+    }
+  },
+  {
+    "model": "store.author",
+    "pk": 8,
+    "fields": {
+      "name": "J.R.R. Tolkien",
+      "biography": "English writer, author of The Lord of the Rings.",
+      "date_of_birth": "1892-01-03",
+      "date_of_death": "1973-09-02"
+    }
+  },
+  {
+    "model": "store.author",
+    "pk": 9,
+    "fields": {
+      "name": "Isaac Asimov",
+      "biography": "American science fiction writer and biochemist.",
+      "date_of_birth": "1920-01-02",
+      "date_of_death": "1992-04-06"
+    }
+  },
+  {
+    "model": "store.author",
+    "pk": 10,
+    "fields": {
+      "name": "Leo Tolstoy",
+      "biography": "Russian writer, author of War and Peace.",
+      "date_of_birth": "1828-09-09",
+      "date_of_death": "1910-11-20"
+    }
+  },
+  {
+    "model": "store.author",
+    "pk": 11,
+    "fields": {
+      "name": "Fyodor Dostoevsky",
+      "biography": "Russian novelist, philosopher and journalist.",
+      "date_of_birth": "1821-11-11",
+      "date_of_death": "1881-02-09"
+    }
+  },
+  {
+    "model": "store.author",
+    "pk": 12,
+    "fields": {
+      "name": "Harper Lee",
+      "biography": "American author best known for 'To Kill a Mockingbird'.",
+      "date_of_birth": "1926-04-28",
+      "date_of_death": "2016-02-19"
+    }
+  },
+  {
+    "model": "store.author",
+    "pk": 13,
+    "fields": {
+      "name": "Stephen King",
+      "biography": "American author of horror and suspense novels.",
+      "date_of_birth": "1947-09-21",
+      "date_of_death": null
+    }
+  },
+  {
+    "model": "store.author",
+    "pk": 14,
+    "fields": {
+      "name": "Charles Dickens",
+      "biography": "English novelist and social critic.",
+      "date_of_birth": "1812-02-07",
+      "date_of_death": "1870-06-09"
+    }
+  },
+  {
+    "model": "store.author",
+    "pk": 15,
+    "fields": {
+      "name": "H.G. Wells",
+      "biography": "English writer, known for his science fiction novels.",
+      "date_of_birth": "1866-09-21",
+      "date_of_death": "1946-08-13"
+    }
+  },
+  {
+    "model": "store.author",
+    "pk": 16,
+    "fields": {
+      "name": "Arthur Conan Doyle",
+      "biography": "British writer, creator of Sherlock Holmes.",
+      "date_of_birth": "1859-05-22",
+      "date_of_death": "1930-07-07"
+    }
+  },
+  {
+    "model": "store.author",
+    "pk": 17,
+    "fields": {
+      "name": "Virginia Woolf",
+      "biography": "English modernist writer and feminist.",
+      "date_of_birth": "1882-01-25",
+      "date_of_death": "1941-03-28"
+    }
+  },
+  {
+    "model": "store.author",
+    "pk": 18,
+    "fields": {
+      "name": "Franz Kafka",
+      "biography": "Bohemian novelist and short-story writer.",
+      "date_of_birth": "1883-07-03",
+      "date_of_death": "1924-06-03"
+    }
+  },
+  {
+    "model": "store.author",
+    "pk": 19,
+    "fields": {
+      "name": "Gabriel García Márquez",
+      "biography": "Colombian novelist and Nobel laureate.",
+      "date_of_birth": "1927-03-06",
+      "date_of_death": "2014-04-17"
+    }
+  },
+  {
+    "model": "store.author",
+    "pk": 20,
+    "fields": {
+      "name": "Herman Melville",
+      "biography": "American novelist, author of Moby-Dick.",
+      "date_of_birth": "1819-08-01",
+      "date_of_death": "1891-09-28"
+    }
+  },
+  {
+    "model": "store.author",
+    "pk": 21,
+    "fields": {
+      "name": "Kurt Vonnegut",
+      "biography": "American writer of satire and science fiction.",
+      "date_of_birth": "1922-11-11",
+      "date_of_death": "2007-04-11"
+    }
+  },
+  {
+    "model": "store.author",
+    "pk": 22,
+    "fields": {
+      "name": "Toni Morrison",
+      "biography": "American novelist and Nobel laureate.",
+      "date_of_birth": "1931-02-18",
+      "date_of_death": "2019-08-05"
+    }
+  },
+  {
+    "model": "store.author",
+    "pk": 23,
+    "fields": {
+      "name": "Jules Verne",
+      "biography": "French novelist, pioneer of science fiction.",
+      "date_of_birth": "1828-02-08",
+      "date_of_death": "1905-03-24"
+    }
+  },
+  {
+    "model": "store.author",
+    "pk": 24,
+    "fields": {
+      "name": "Oscar Wilde",
+      "biography": "Irish poet and playwright.",
+      "date_of_birth": "1854-10-16",
+      "date_of_death": "1900-11-30"
+    }
+  },
+  {
+    "model": "store.author",
+    "pk": 25,
+    "fields": {
+      "name": "Emily Dickinson",
+      "biography": "American poet.",
+      "date_of_birth": "1830-12-10",
+      "date_of_death": "1886-05-15"
+    }
+  },
+  {
+    "model": "store.author",
+    "pk": 26,
+    "fields": {
+      "name": "Mary Shelley",
+      "biography": "English novelist, author of Frankenstein.",
+      "date_of_birth": "1797-08-30",
+      "date_of_death": "1851-02-01"
+    }
+  },
+  {
+    "model": "store.author",
+    "pk": 27,
+    "fields": {
+      "name": "Bram Stoker",
+      "biography": "Irish author, best known for Dracula.",
+      "date_of_birth": "1847-11-08",
+      "date_of_death": "1912-04-20"
+    }
+  },
+  {
+    "model": "store.author",
+    "pk": 28,
+    "fields": {
+      "name": "Sylvia Plath",
+      "biography": "American poet and novelist.",
+      "date_of_birth": "1932-10-27",
+      "date_of_death": "1963-02-11"
+    }
+  },
+  {
+    "model": "store.author",
+    "pk": 29,
+    "fields": {
+      "name": "Albert Camus",
+      "biography": "French philosopher and author.",
+      "date_of_birth": "1913-11-07",
+      "date_of_death": "1960-01-04"
+    }
+  },
+  {
+    "model": "store.author",
+    "pk": 30,
+    "fields": {
+      "name": "Neil Gaiman",
+      "biography": "British author of fantasy and horror.",
+      "date_of_birth": "1960-11-10",
+      "date_of_death": null
+    }
+  }
+]
