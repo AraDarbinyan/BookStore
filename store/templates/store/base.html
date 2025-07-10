@@ -36,7 +36,11 @@
 
         <div class="logo">
             <img src="{% static 'store/images/profile.png' %}" alt="profile"> <br>
-            <p>profile</p>
+            {% if user.is_authenticated %}
+                <p><a href="profile/">profile</a></p> 
+            {% else %}
+                <p><a href="login/">profile</a> | <a href="{% url 'register' %}">Register</a></p>
+            {% endif %}
         </div>
     </div>
 

@@ -1,0 +1,18 @@
+{% extends "store/base.html" %}
+
+{% block title %}Login{% endblock %}
+
+
+{% block content %}
+<div>
+    <h2>LogIn</h2>
+    <form method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+    {{ login_form.username.label_tag }} {{ login_form.username }}<br>
+    {{ login_form.password.label_tag }} {{ login_form.password }}<br>
+    <button type="submit">Log In</button>
+    <button type="reset">Reset</button>
+    </form>
+
+</div>
+{% endblock %}

@@ -1,4 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .forms import RegisterForm
+from django.contrib.auth import login
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.forms import AuthenticationForm
 
 # Create your views here.
 def index(request):
@@ -11,3 +15,38 @@ def about(request):
 
 def contact(request):
     return render(request, 'store/contact.html')
+
+
+def register_view(request):
+    if request.method == 'POST':
+        form = RegisterForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            return redirect('profile')
+    else:
+        form = RegisterForm()
+    return render(request, 'store/register.html', {
+        'register_form': form,
+        'login_form': AuthenticationForm()
+    })
+
+def login_view(request):
+    if request.method == 'POST':
+        form = AuthenticationForm(data=request.POST)
+        if form.is_valid():
+            user = form.get_user()
+            login(request, user)
+            return redirect('profile')
+    else:
+        form = AuthenticationForm()
+    return render(request, 'store/login.html', {
+        'login_form': form,
+        'register_form': RegisterForm()
+    })
+
+
+@login_required
+def profile_view(request):
+    customer = request.user.customer  
+    return render(request, 'store/profile.html', {'customer': customer})

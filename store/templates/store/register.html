@@ -1,0 +1,19 @@
+{% extends "store/base.html" %}
+
+{% block title %}Login{% endblock %}
+
+
+{% block content %}
+<h2>SignUp</h2>
+<form method="post" action="{% url 'register' %}">
+    {% csrf_token %}
+    {{ register_form.username.label_tag }} {{ register_form.username }}<br>
+    {{ register_form.email.label_tag }} {{ register_form.email }}<br>
+    {{ register_form.password1.label_tag }} {{ register_form.password1 }}<br>
+    {{ register_form.password2.label_tag }} {{ register_form.password2 }}<br>
+    {{ register_form.phone.label_tag }} {{ register_form.phone }}<br>
+    {{ register_form.address.label_tag }} {{ register_form.address }}<br>
+    <button type="submit">Sign Up</button>
+    <button type="reset">Reset</button>
+</form>
+{% endblock %}
