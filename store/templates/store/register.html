@@ -1,6 +1,12 @@
 {% extends "store/base.html" %}
+{% load static %}
 
 {% block title %}Login{% endblock %}
+
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'store/css/login.css' %}">
+{% endblock %}
 
 
 {% block content %}
@@ -9,10 +15,10 @@
     {% csrf_token %}
     {{ register_form.username.label_tag }} {{ register_form.username }}<br>
     {{ register_form.email.label_tag }} {{ register_form.email }}<br>
-    {{ register_form.password1.label_tag }} {{ register_form.password1 }}<br>
-    {{ register_form.password2.label_tag }} {{ register_form.password2 }}<br>
     {{ register_form.phone.label_tag }} {{ register_form.phone }}<br>
     {{ register_form.address.label_tag }} {{ register_form.address }}<br>
+    {{ register_form.password1.label_tag }} {{ register_form.password1 }}<br>
+    {{ register_form.password2.label_tag }} {{ register_form.password2 }}<br>
     <button type="submit">Sign Up</button>
     <button type="reset">Reset</button>
 </form>

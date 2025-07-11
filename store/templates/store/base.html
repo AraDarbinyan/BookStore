@@ -22,11 +22,11 @@
         </div>
 
         <div>
-            <p><a href="about/">About</a></p>
+            <p><a href="{% url 'about' %}">About</a></p>
         </div>
 
         <div>
-            <p><a href="contact/">Contact</a></p>
+            <p><a href="{% url 'contact' %}">Contact</a></p>
         </div>
 
         <div class="logo">
@@ -37,9 +37,9 @@
         <div class="logo">
             <img src="{% static 'store/images/profile.png' %}" alt="profile"> <br>
             {% if user.is_authenticated %}
-                <p><a href="profile/">profile</a></p> 
+                <p><a href="{% url 'profile' %}">Profile</a></p> 
             {% else %}
-                <p><a href="login/">profile</a> | <a href="{% url 'register' %}">Register</a></p>
+                <p><a href="{% url 'login' %}">LogIn</a> | <a href="{% url 'register' %}">Register</a></p>
             {% endif %}
         </div>
     </div>

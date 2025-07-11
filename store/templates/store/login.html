@@ -1,6 +1,12 @@
 {% extends "store/base.html" %}
+{% load static %}
 
 {% block title %}Login{% endblock %}
+
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'store/css/login.css' %}">
+{% endblock %}
 
 
 {% block content %}
