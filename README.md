@@ -31,5 +31,9 @@ This project is intended as a portfolio piece and learning project for a junior 
 ## 🧱 Pages
 
 - `/` – Home (book listing)
+- `/books/` – All books
 - `/about/` – About the project
 - `/contact/` – Contact form
+- `/login/` – login form
+- `/register/` – register form
+- `/progile/` – profile page
