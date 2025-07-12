@@ -1,12 +1,19 @@
 from django.shortcuts import render, redirect
 from .forms import RegisterForm
+from .models import Book
 from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import AuthenticationForm
 
 # Create your views here.
 def index(request):
-    return render(request, 'store/index.html')
+    books = Book.objects.all()[:12]
+    return render(request, 'store/index.html', {'books': books})
+
+
+def all_books_view(request):
+    books = Book.objects.all()
+    return render(request, 'store/all_books.html', {'books': books})
 
 
 def about(request):

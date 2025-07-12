@@ -1,11 +1,38 @@
 {% extends "store/base.html" %}
+{% load static %}
 
 {% block title %}Home{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'store/css/index.css' %}">
+{% endblock %}
 
 {% block content %}
 <div class="hero">
   <h1>Welcome to Bookstore</h1>
   <p>Thousands of books from the best authors. Fiction, science and children's literature - all in one place.</p>
+</div>
+
+<h2>Catalog</h2>
+<div class="book-grid">
+    {% for book in books %}
+    <div class="book-card">
+        {% if book.image %}
+            <img src="{{ book.image.url }}" alt="{{ book.title }}">
+        {% endif %}
+        <h3>{{ book.title }}</h3>
+        <p>Author:
+            {% for author in book.authors.all %}
+            {{ author.name }}{% if not forloop.last %}, {% endif %}
+            {% endfor %}</p>
+        <p>Price: ${{ book.price }}</p>
+        <a href="#">View Details</a>
+    </div>
+    {% endfor %}
+</div>
+
+<div style="text-align: center; margin-top: 30px;">
+    <a href="{% url 'all_books' %}" class="btn-show-all">Show All Books</a>
 </div>
 
 <div>

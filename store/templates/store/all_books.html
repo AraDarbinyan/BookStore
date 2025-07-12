@@ -1,0 +1,30 @@
+{% extends 'store/base.html' %}
+{% load static %}
+
+
+{% block title %}Books{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'store/css/index.css' %}">
+{% endblock %}
+
+{% block content %}
+<h2>All Books</h2>
+
+<div class="book-grid">
+  {% for book in books %}
+    <div class="book-card">
+      <h3>{{ book.title }}</h3>
+      <p>
+        Author:
+        {% for author in book.authors.all %}
+          {{ author.name }}{% if not forloop.last %}, {% endif %}
+        {% endfor %}
+      </p>
+      <p>Price: ${{ book.price }}</p>
+      <a href="">View Details</a>
+    </div>
+  {% endfor %}
+</div>
+
+{% endblock %}
