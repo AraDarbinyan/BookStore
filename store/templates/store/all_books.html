@@ -22,7 +22,7 @@
         {% endfor %}
       </p>
       <p>Price: ${{ book.price }}</p>
-      <a href="">View Details</a>
+      <a href="{%url 'book_detail' book.id %}">View Details</a>
     </div>
   {% endfor %}
 </div>

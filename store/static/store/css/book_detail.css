@@ -1,0 +1,29 @@
+.book-detail {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.book-detail h2 {
+  margin-bottom: 15px;
+}
+
+.book-detail p {
+  margin-bottom: 10px;
+}
+
+.btn-back {
+  display: inline-block;
+  padding: 8px 14px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.btn-back:hover {
+  background-color: #0056b3;
+}

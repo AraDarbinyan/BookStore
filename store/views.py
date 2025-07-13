@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .forms import RegisterForm
 from .models import Book
 from django.contrib.auth import login
@@ -14,6 +14,11 @@ def index(request):
 def all_books_view(request):
     books = Book.objects.all()
     return render(request, 'store/all_books.html', {'books': books})
+
+
+def book_detail_view(request, pk):
+    book = get_object_or_404(Book, pk=pk)
+    return render(request, 'store/book_detail.html', {'book': book})
 
 
 def about(request):
