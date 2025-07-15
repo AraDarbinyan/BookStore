@@ -35,6 +35,12 @@
     <div class="cart-total">
         Total: ${{ total_price }}
     </div>
+
+    <form method="post" action="{% url 'checkout' %}">
+        {% csrf_token %}
+        <button type="submit">Checkout</button>
+    </form>
+
 </div>
 
 

@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .forms import RegisterForm
-from .models import Book, Cart, CartItem
+from .models import Book, Cart, CartItem, Order
 from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import AuthenticationForm
@@ -61,6 +61,30 @@ def remove_from_cart(request, item_id):
     item = get_object_or_404(CartItem, id=item_id)
     item.delete()
     return redirect('cart')
+
+
+@require_POST
+@login_required
+def checkout_view(request):
+    customer = request.user.customer
+    cart = Cart.objects.filter(customer=customer, is_active=True).first()
+
+    if cart and cart.items.exists():
+        order = Order.objects.create(
+            customer=customer,
+            cart=cart,
+            order_type='paper'  
+        )
+        cart.is_active = False
+        cart.save()
+        return redirect('thank_you')
+    return redirect('cart')
+
+
+@login_required
+def thank_you_view(request):
+    return render(request, 'store/thank_you.html')
+
 
 
 def about(request):
