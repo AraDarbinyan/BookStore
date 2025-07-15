@@ -31,7 +31,11 @@
 
         <div class="logo">
             <img src="{% static 'store/images/cart.png' %}" alt="cart"> <br>
-            <p>Cart</p>
+            {% if user.is_authenticated %}
+                <p><a href="{% url 'cart' %}">Cart</a></p> 
+            {% else %}
+                <p><a href="{% url 'login' %}">Cart</a></p>
+            {% endif %}
         </div>
 
         <div class="logo">

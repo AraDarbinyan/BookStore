@@ -1,0 +1,41 @@
+{% extends 'store/base.html' %}
+{% load static %}
+
+{% block title %}Cart{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'store/css/cart.css' %}">
+{% endblock %}
+
+
+{% block content %}
+<div class="cart-container">
+    <h1>Your Cart</h1>
+    <table class="cart-table">
+        <thead>
+            <tr>
+                <th>Book</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in items %}
+                <tr>
+                    <td>{{ item.book.title }}</td>
+                    <td>{{ item.quantity }}</td>
+                    <td>${{ item.get_total_price }}</td>
+                    <td><a href="{% url 'remove_from_cart' item.id %}" class="cart-remove">Remove</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="cart-total">
+        Total: ${{ total_price }}
+    </div>
+</div>
+
+
+{% endblock %}

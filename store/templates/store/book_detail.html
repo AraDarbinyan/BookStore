@@ -21,8 +21,9 @@
   <p><strong>Year:</strong> {{ book.year_published }}</p>
   <p><strong>Price:</strong> ${{ book.price }}</p>
   <p><strong>Description:</strong> {{ book.description }}</p>
-  <form action="">
-    <button type="submit">Add to cart</button>
+  <form method="post" action="{% url 'add_to_cart' book.id %}">
+    {% csrf_token %}
+    <button type="submit" class="add-to-cart-btn">Add to cart</button>
   </form>
   <a href="{% url 'index' %}" class="btn-back">← Back to Home</a>
 </div>

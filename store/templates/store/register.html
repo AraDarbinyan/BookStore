@@ -21,5 +21,7 @@
     {{ register_form.password2.label_tag }} {{ register_form.password2 }}<br>
     <button type="submit">Sign Up</button>
     <button type="reset">Reset</button>
+
+    <p>Already have an account? Go and <a href="{% url 'login' %}">login</a></p>
 </form>
 {% endblock %}
