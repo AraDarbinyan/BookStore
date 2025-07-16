@@ -126,5 +126,6 @@ def login_view(request):
 
 @login_required
 def profile_view(request):
-    customer = request.user.customer  
-    return render(request, 'store/profile.html', {'customer': customer})
+    customer = request.user.customer
+    orders = Order.objects.filter(customer=customer).order_by('-ordered_at').prefetch_related('cart__items__book')
+    return render(request, 'store/profile.html', {'customer': customer, 'orders': orders})

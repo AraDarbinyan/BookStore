@@ -13,4 +13,24 @@
     <button type="submit">Logout</button>
   </form>
 
+
+<h2>Your Orders</h2>
+
+{% if orders %}
+    {% for order in orders %}
+        <div class="order">
+            <h3>Order #{{ order.id }} — {{ order.created_at|date:"d M Y H:i" }}</h3>
+            <ul>
+                {% for item in order.cart.items.all %}
+                    <li>{{ item.book.title }} — Quantity: {{ item.quantity }} — Price: ${{ item.get_total_price }}</li>
+                {% endfor %}
+            </ul>
+            <p><strong>Total:</strong> ${{ order.cart.get_total_price }}</p>
+        </div>
+        <hr>
+    {% endfor %}
+{% else %}
+    <p>You have no orders yet.</p>
+{% endif %}
+
 {% endblock %}
