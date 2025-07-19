@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .forms import RegisterForm
 from django.db.models import Q
-from .models import Book, Cart, CartItem, Order, Category
+from .models import Book, Cart, CartItem, Order, Category, Customer
 from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import AuthenticationForm
@@ -52,7 +52,10 @@ def book_detail_view(request, pk):
 
 @login_required
 def cart_view(request):
-    customer = request.user.customer
+    try:
+        customer = request.user.customer
+    except Customer.DoesNotExist:
+        customer = Customer.objects.create(user=request.user)
     cart = Cart.objects.filter(customer=customer, is_active=True).first()
 
     if cart:
@@ -129,7 +132,7 @@ def register_view(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect('profile')
+            return redirect('login')
     else:
         form = RegisterForm()
     return render(request, 'store/register.html', {
@@ -154,6 +157,9 @@ def login_view(request):
 
 @login_required
 def profile_view(request):
-    customer = request.user.customer
+    try:
+        customer = request.user.customer
+    except Customer.DoesNotExist:
+        customer = Customer.objects.create(user=request.user)
     orders = Order.objects.filter(customer=customer).order_by('-ordered_at').prefetch_related('cart__items__book')
     return render(request, 'store/profile.html', {'customer': customer, 'orders': orders})
