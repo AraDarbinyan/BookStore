@@ -298,5 +298,107 @@
       "date_of_birth": "1960-11-10",
       "date_of_death": null
     }
-  }
+  },
+  {
+    "model": "store.author",
+    "pk": 31,
+    "fields": {
+        "name": "F. Scott Fitzgerald",
+        "biography": "American novelist, author of The Great Gatsby.",
+        "date_of_birth": "1896-09-24",
+        "date_of_death": "1940-12-21"
+    }
+},
+{
+    "model": "store.author",
+    "pk": 32,
+    "fields": {
+        "name": "Aldous Huxley",
+        "biography": "English writer and philosopher, author of Brave New World.",
+        "date_of_birth": "1894-07-26",
+        "date_of_death": "1963-11-22"
+    }
+},
+{
+    "model": "store.author",
+    "pk": 33,
+    "fields": {
+        "name": "Margaret Atwood",
+        "biography": "Canadian poet, novelist, literary critic, author of The Handmaid's Tale.",
+        "date_of_birth": "1939-11-18",
+        "date_of_death": null
+    }
+},
+{
+    "model": "store.author",
+    "pk": 34,
+    "fields": {
+        "name": "George R.R. Martin",
+        "biography": "American novelist and short story writer, author of A Song of Ice and Fire.",
+        "date_of_birth": "1948-09-20",
+        "date_of_death": null
+    }
+},
+{
+    "model": "store.author",
+    "pk": 35,
+    "fields": {
+        "name": "Homer",
+        "biography": "Ancient Greek epic poet, author of the Iliad and the Odyssey.",
+        "date_of_birth": null,
+        "date_of_death": null
+    }
+},
+{
+    "model": "store.author",
+    "pk": 36,
+    "fields": {
+        "name": "Emily Brontë",
+        "biography": "English novelist and poet, author of Wuthering Heights.",
+        "date_of_birth": "1818-07-30",
+        "date_of_death": "1848-12-19"
+    }
+},
+{
+    "model": "store.author",
+    "pk": 37,
+    "fields": {
+        "name": "Charlotte Brontë",
+        "biography": "English novelist and poet, author of Jane Eyre.",
+        "date_of_birth": "1816-04-21",
+        "date_of_death": "1855-03-31"
+    }
+},
+{
+    "model": "store.author",
+    "pk": 38,
+    "fields": {
+        "name": "Alexander Pushkin",
+        "biography": "Russian writer, the greateast person of russian literature.",
+        "date_of_birth": "1799-06-06",
+        "date_of_death": "1837-02-10"
+    }
+},
+{
+    "model": "store.author",
+    "pk": 39,
+    "fields": {
+        "name": "Dante Alighieri",
+        "biography": "Italian poet, author of The Divine Comedy.",
+        "date_of_birth": "1265-01-01",
+        "date_of_death": "1321-01-01"
+    }
+},
+{
+    "model": "store.author",
+    "pk": 40,
+    "fields": {
+        "name": "Victor Hugo",
+        "biography": "French writer, author of Les Misérables and The Hunchback of Notre-Dame.",
+        "date_of_birth": "1802-02-26",
+        "date_of_death": "1885-05-22"
+    }
+}
+
+
 ]

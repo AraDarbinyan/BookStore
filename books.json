@@ -1,1602 +1,1175 @@
 [
   {
-    "model": "store.book",
-    "pk": 1,
-    "fields": {
-      "title": "Job behind",
-      "description": "Soon recent health actually may everybody investment.",
-      "isbn": "9780607084306",
-      "publisher": "HarperCollins",
-      "year_published": 1990,
-      "price": "655.36",
-      "stock": 0,
-      "authors": [
-        6
-      ]
-    }
-  },
-  {
-    "model": "store.book",
-    "pk": 2,
-    "fields": {
-      "title": "Stop dinner traditional",
-      "description": "Determine room my president western join next foreign.",
-      "isbn": "9780605550872",
-      "publisher": "HarperCollins",
-      "year_published": 1984,
-      "price": "556.70",
-      "stock": 40,
-      "authors": [
-        2
-      ]
-    }
-  },
-  {
-    "model": "store.book",
-    "pk": 3,
-    "fields": {
-      "title": "Century hospital heart",
-      "description": "Determine picture themselves member realize piece outside.",
-      "isbn": "9781899126897",
-      "publisher": "Simon & Schuster",
-      "year_published": 1907,
-      "price": "107.14",
-      "stock": 86,
-      "authors": [
-        27
-      ]
-    }
-  },
-  {
-    "model": "store.book",
-    "pk": 4,
-    "fields": {
-      "title": "Idea risk",
-      "description": "Race southern or back billion natural paper action.",
-      "isbn": "9780115595585",
-      "publisher": "Scholastic",
-      "year_published": 1967,
-      "price": "818.41",
-      "stock": 100,
-      "authors": [
-        16
-      ]
-    }
-  },
-  {
-    "model": "store.book",
-    "pk": 5,
-    "fields": {
-      "title": "Couple audience community",
-      "description": "Two movement lose end public.",
-      "isbn": "9780326685976",
-      "publisher": "Vintage",
-      "year_published": 1929,
-      "price": "333.65",
-      "stock": 40,
-      "authors": [
-        21
-      ]
-    }
-  },
-  {
-    "model": "store.book",
-    "pk": 6,
-    "fields": {
-      "title": "Group serious of",
-      "description": "Medical western sing name. Action yourself enter system.",
-      "isbn": "9781820896189",
-      "publisher": "Oxford Press",
-      "year_published": 1916,
-      "price": "331.83",
-      "stock": 53,
-      "authors": [
-        13
-      ]
-    }
-  },
-  {
-    "model": "store.book",
-    "pk": 7,
-    "fields": {
-      "title": "Worry more",
-      "description": "Whole idea federal national may government necessary.",
-      "isbn": "9781817223295",
-      "publisher": "Simon & Schuster",
-      "year_published": 2012,
-      "price": "367.40",
-      "stock": 100,
-      "authors": [
-        19
-      ]
-    }
-  },
-  {
-    "model": "store.book",
-    "pk": 8,
-    "fields": {
-      "title": "Eye best somebody",
-      "description": "Style material common trip.",
-      "isbn": "9780613319638",
-      "publisher": "Penguin Random House",
-      "year_published": 1998,
-      "price": "224.80",
-      "stock": 83,
-      "authors": [
-        27
-      ]
-    }
-  },
-  {
-    "model": "store.book",
-    "pk": 9,
-    "fields": {
-      "title": "That room sign",
-      "description": "Court rate two through husband place.",
-      "isbn": "9780879483906",
-      "publisher": "Vintage",
-      "year_published": 1983,
-      "price": "322.82",
-      "stock": 9,
-      "authors": [
-        18
-      ]
-    }
-  },
-  {
-    "model": "store.book",
-    "pk": 10,
-    "fields": {
-      "title": "Home mission",
-      "description": "Expert his page back carry worker something week.",
-      "isbn": "9781578054909",
-      "publisher": "Oxford Press",
-      "year_published": 1994,
-      "price": "381.06",
-      "stock": 61,
-      "authors": [
-        14
-      ]
-    }
-  },
-  {
-    "model": "store.book",
-    "pk": 11,
-    "fields": {
-      "title": "Record time great",
-      "description": "Necessary act sometimes large drug anyone.",
-      "isbn": "9780344138928",
-      "publisher": "Simon & Schuster",
-      "year_published": 1933,
-      "price": "774.23",
-      "stock": 76,
-      "authors": [
-        19
-      ]
-    }
-  },
-  {
-    "model": "store.book",
-    "pk": 12,
-    "fields": {
-      "title": "Myself hit response",
-      "description": "Receive financial accept beautiful where tax.",
-      "isbn": "9781934784846",
-      "publisher": "Vintage",
-      "year_published": 2017,
-      "price": "330.85",
-      "stock": 11,
-      "authors": [
-        11
-      ]
-    }
-  },
-  {
-    "model": "store.book",
-    "pk": 13,
-    "fields": {
-      "title": "Least decision method",
-      "description": "Popular exactly billion water certainly scene.",
-      "isbn": "9780639172217",
-      "publisher": "HarperCollins",
-      "year_published": 2001,
-      "price": "728.56",
-      "stock": 83,
-      "authors": [
-        6
-      ]
-    }
-  },
+        "model": "store.book",
+        "pk": 1,
+        "fields": {
+            "title": "1984",
+            "description": "Dystopian novel by George Orwell.",
+            "isbn": "9780451524935",
+            "publisher": "Secker & Warburg",
+            "year_published": 1949,
+            "price": "14.99",
+            "stock": 50,
+            "authors": [1],
+            "categories": [1, 4]
+        }
+    },
+    {
+        "model": "store.book",
+        "pk": 2,
+        "fields": {
+            "title": "Animal Farm",
+            "description": "Political satire by George Orwell.",
+            "isbn": "9780451526342",
+            "publisher": "Secker & Warburg",
+            "year_published": 1945,
+            "price": "9.99",
+            "stock": 40,
+            "authors": [1],
+            "categories": [1]
+        }
+    },
+    {
+        "model": "store.book",
+        "pk": 3,
+        "fields": {
+            "title": "Brave New World",
+            "description": "Dystopian science fiction by Aldous Huxley.",
+            "isbn": "9780060850524",
+            "publisher": "Chatto & Windus",
+            "year_published": 1932,
+            "price": "12.99",
+            "stock": 30,
+            "authors": [32],
+            "categories": [1, 4]
+        }
+    },
+    {
+        "model": "store.book",
+        "pk": 4,
+        "fields": {
+            "title": "The Great Gatsby",
+            "description": "Novel of the American Jazz Age by F. Scott Fitzgerald.",
+            "isbn": "9780743273565",
+            "publisher": "Charles Scribner's Sons",
+            "year_published": 1925,
+            "price": "10.99",
+            "stock": 35,
+            "authors": [31],
+            "categories": [1]
+        }
+    },
+    {
+        "model": "store.book",
+        "pk": 5,
+        "fields": {
+            "title": "To Kill a Mockingbird",
+            "description": "Novel of racism and justice by Harper Lee.",
+            "isbn": "9780061120084",
+            "publisher": "J.B. Lippincott & Co.",
+            "year_published": 1960,
+            "price": "13.99",
+            "stock": 40,
+            "authors": [12],
+            "categories": [1]
+        }
+    },
+    {
+        "model": "store.book",
+        "pk": 6,
+        "fields": {
+            "title": "The Handmaid's Tale",
+            "description": "Dystopian novel by Margaret Atwood.",
+            "isbn": "9780385490818",
+            "publisher": "McClelland and Stewart",
+            "year_published": 1985,
+            "price": "14.99",
+            "stock": 20,
+            "authors": [33],
+            "categories": [1, 4]
+        }
+    },
+    {
+        "model": "store.book",
+        "pk": 7,
+        "fields": {
+            "title": "A Game of Thrones",
+            "description": "First book of A Song of Ice and Fire by George R.R. Martin.",
+            "isbn": "9780553103540",
+            "publisher": "Bantam Books",
+            "year_published": 1996,
+            "price": "19.99",
+            "stock": 30,
+            "authors": [34],
+            "categories": [3]
+        }
+    },
+    {
+        "model": "store.book",
+        "pk": 8,
+        "fields": {
+            "title": "The Odyssey",
+            "description": "Epic poem attributed to Homer.",
+            "isbn": "9780140268867",
+            "publisher": "Penguin Classics",
+            "year_published": 800,
+            "price": "9.99",
+            "stock": 20,
+            "authors": [35],
+            "categories": [1]
+        }
+    },
+    {
+        "model": "store.book",
+        "pk": 9,
+        "fields": {
+            "title": "Wuthering Heights",
+            "description": "Gothic novel by Emily Brontë.",
+            "isbn": "9780141439556",
+            "publisher": "Thomas Cautley Newby",
+            "year_published": 1847,
+            "price": "11.99",
+            "stock": 25,
+            "authors": [36],
+            "categories": [1, 6]
+        }
+    },
+    {
+        "model": "store.book",
+        "pk": 10,
+        "fields": {
+            "title": "Jane Eyre",
+            "description": "Novel by Charlotte Brontë.",
+            "isbn": "9780141441146",
+            "publisher": "Smith, Elder & Co.",
+            "year_published": 1847,
+            "price": "12.99",
+            "stock": 30,
+            "authors": [37],
+            "categories": [1, 6]
+        }
+    },
+    {
+        "model": "store.book",
+        "pk": 11,
+        "fields": {
+            "title": "Eugene Onegin",
+            "description": "Novel in verse by Alexander Pushkin.",
+            "isbn": "9780140448030",
+            "publisher": "Penguin Classics",
+            "year_published": 1833,
+            "price": "10.50",
+            "stock": 20,
+            "authors": [38],
+            "categories": [1]
+        }
+    },
+    {
+        "model": "store.book",
+        "pk": 12,
+        "fields": {
+            "title": "The Divine Comedy",
+            "description": "Epic poem by Dante Alighieri.",
+            "isbn": "9780140448955",
+            "publisher": "Penguin Classics",
+            "year_published": 1320,
+            "price": "16.00",
+            "stock": 20,
+            "authors": [39],
+            "categories": [1]
+        }
+    },
+    {
+        "model": "store.book",
+        "pk": 13,
+        "fields": {
+            "title": "Les Misérables",
+            "description": "Historical novel by Victor Hugo.",
+            "isbn": "9780451419439",
+            "publisher": "A. Lacroix, Verboeckhoven & Cie",
+            "year_published": 1862,
+            "price": "18.99",
+            "stock": 20,
+            "authors": [40],
+            "categories": [1, 9]
+        }
+    },
   {
     "model": "store.book",
     "pk": 14,
     "fields": {
-      "title": "Never test",
-      "description": "Then must serious sense ahead simply now suddenly.",
-      "isbn": "9780405629600",
-      "publisher": "Hachette",
-      "year_published": 1962,
-      "price": "248.03",
-      "stock": 59,
-      "authors": [
-        23
-      ]
+        "title": "Harry Potter and the Philosopher's Stone",
+        "description": "The first book of the Harry Potter series by J.K. Rowling.",
+        "isbn": "9780747532699",
+        "publisher": "Bloomsbury",
+        "year_published": 1997,
+        "price": "12.99",
+        "stock": 50,
+        "authors": [7],
+        "categories": [3, 8]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 15,
     "fields": {
-      "title": "Purpose compare environment",
-      "description": "Either cover idea ok. Reason none at tough.",
-      "isbn": "9781609772062",
-      "publisher": "Scholastic",
-      "year_published": 1983,
-      "price": "954.75",
-      "stock": 93,
-      "authors": [
-        10
-      ]
+        "title": "Harry Potter and the Chamber of Secrets",
+        "description": "The second book of the Harry Potter series by J.K. Rowling.",
+        "isbn": "9780747538493",
+        "publisher": "Bloomsbury",
+        "year_published": 1998,
+        "price": "12.99",
+        "stock": 50,
+        "authors": [7],
+        "categories": [3, 8]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 16,
     "fields": {
-      "title": "Necessary lay western security",
-      "description": "Sell phone trial know radio structure for.",
-      "isbn": "9780158988214",
-      "publisher": "Bloomsbury",
-      "year_published": 1972,
-      "price": "358.32",
-      "stock": 44,
-      "authors": [
-        30
-      ]
+        "title": "The Fellowship of the Ring",
+        "description": "First part of The Lord of the Rings by J.R.R. Tolkien.",
+        "isbn": "9780261103573",
+        "publisher": "George Allen & Unwin",
+        "year_published": 1954,
+        "price": "15.99",
+        "stock": 40,
+        "authors": [8],
+        "categories": [3]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 17,
     "fields": {
-      "title": "Data anyone",
-      "description": "Season list market increase option left.",
-      "isbn": "9780640200763",
-      "publisher": "Tor Books",
-      "year_published": 2020,
-      "price": "742.56",
-      "stock": 17,
-      "authors": [
-        9
-      ]
+        "title": "The Two Towers",
+        "description": "Second part of The Lord of the Rings by J.R.R. Tolkien.",
+        "isbn": "9780261103580",
+        "publisher": "George Allen & Unwin",
+        "year_published": 1954,
+        "price": "15.99",
+        "stock": 40,
+        "authors": [8],
+        "categories": [3]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 18,
     "fields": {
-      "title": "Bar draw or",
-      "description": "Else unit step when book.",
-      "isbn": "9780503211110",
-      "publisher": "Vintage",
-      "year_published": 2019,
-      "price": "873.27",
-      "stock": 95,
-      "authors": [
-        8
-      ]
+        "title": "The Return of the King",
+        "description": "Final part of The Lord of the Rings by J.R.R. Tolkien.",
+        "isbn": "9780261103597",
+        "publisher": "George Allen & Unwin",
+        "year_published": 1955,
+        "price": "15.99",
+        "stock": 40,
+        "authors": [8],
+        "categories": [3]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 19,
     "fields": {
-      "title": "Group action detail",
-      "description": "Dinner whatever but tough idea within decide situation.",
-      "isbn": "9781207053334",
-      "publisher": "HarperCollins",
-      "year_published": 1974,
-      "price": "382.99",
-      "stock": 27,
-      "authors": [
-        5
-      ]
+        "title": "The Old Man and the Sea",
+        "description": "Short novel by Ernest Hemingway.",
+        "isbn": "9780684801223",
+        "publisher": "Charles Scribner's Sons",
+        "year_published": 1952,
+        "price": "11.99",
+        "stock": 30,
+        "authors": [6],
+        "categories": [1]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 20,
     "fields": {
-      "title": "Four so walk nor",
-      "description": "Eat job might claim response population instead.",
-      "isbn": "9781286064887",
-      "publisher": "Hachette",
-      "year_published": 1980,
-      "price": "415.68",
-      "stock": 36,
-      "authors": [
-        16
-      ]
+        "title": "For Whom the Bell Tolls",
+        "description": "War novel by Ernest Hemingway.",
+        "isbn": "9780684803357",
+        "publisher": "Charles Scribner's Sons",
+        "year_published": 1940,
+        "price": "13.99",
+        "stock": 30,
+        "authors": [6],
+        "categories": [1]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 21,
     "fields": {
-      "title": "Tend sit",
-      "description": "Build lawyer decade source behavior.",
-      "isbn": "9780331828207",
-      "publisher": "Penguin Random House",
-      "year_published": 1975,
-      "price": "44.73",
-      "stock": 88,
-      "authors": [
-        3
-      ]
+        "title": "Murder on the Orient Express",
+        "description": "Detective novel by Agatha Christie.",
+        "isbn": "9780007119318",
+        "publisher": "Collins Crime Club",
+        "year_published": 1934,
+        "price": "10.99",
+        "stock": 30,
+        "authors": [5],
+        "categories": [5]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 22,
     "fields": {
-      "title": "Then common find organization",
-      "description": "Family season stage event.",
-      "isbn": "9781101081501",
-      "publisher": "Tor Books",
-      "year_published": 1923,
-      "price": "151.03",
-      "stock": 75,
-      "authors": [
-        17
-      ]
+        "title": "And Then There Were None",
+        "description": "Mystery novel by Agatha Christie.",
+        "isbn": "9780007136834",
+        "publisher": "Collins Crime Club",
+        "year_published": 1939,
+        "price": "10.99",
+        "stock": 30,
+        "authors": [5],
+        "categories": [5]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 23,
     "fields": {
-      "title": "Democrat everyone",
-      "description": "Year southern collection experience.",
-      "isbn": "9781981072903",
-      "publisher": "Oxford Press",
-      "year_published": 1901,
-      "price": "694.91",
-      "stock": 75,
-      "authors": [
-        4
-      ]
+        "title": "The Picture of Dorian Gray",
+        "description": "Philosophical novel by Oscar Wilde.",
+        "isbn": "9780141439570",
+        "publisher": "Ward, Lock and Company",
+        "year_published": 1890,
+        "price": "11.99",
+        "stock": 20,
+        "authors": [24],
+        "categories": [1]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 24,
     "fields": {
-      "title": "Half foreign case film",
-      "description": "Role leave might son enter discuss ability.",
-      "isbn": "9781968330002",
-      "publisher": "Hachette",
-      "year_published": 1959,
-      "price": "32.58",
-      "stock": 89,
-      "authors": [
-        15
-      ]
+        "title": "One Hundred Years of Solitude",
+        "description": "Magic realist novel by Gabriel García Márquez.",
+        "isbn": "9780060883287",
+        "publisher": "Harper & Row",
+        "year_published": 1967,
+        "price": "14.99",
+        "stock": 25,
+        "authors": [19],
+        "categories": [1, 3]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 25,
     "fields": {
-      "title": "History American song",
-      "description": "Hospital let share later.",
-      "isbn": "9780690118834",
-      "publisher": "Tor Books",
-      "year_published": 1947,
-      "price": "111.36",
-      "stock": 1,
-      "authors": [
-        27
-      ]
+        "title": "Love in the Time of Cholera",
+        "description": "Romantic novel by Gabriel García Márquez.",
+        "isbn": "9780307389732",
+        "publisher": "Alfred A. Knopf",
+        "year_published": 1985,
+        "price": "13.99",
+        "stock": 25,
+        "authors": [19],
+        "categories": [1, 6]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 26,
     "fields": {
-      "title": "Significant family him fly",
-      "description": "Training listen quality face.",
-      "isbn": "9780189528373",
-      "publisher": "Tor Books",
-      "year_published": 1922,
-      "price": "142.47",
-      "stock": 76,
-      "authors": [
-        16
-      ]
+        "title": "Great Expectations",
+        "description": "Coming-of-age novel by Charles Dickens.",
+        "isbn": "9780141439563",
+        "publisher": "Chapman & Hall",
+        "year_published": 1861,
+        "price": "12.99",
+        "stock": 30,
+        "authors": [14],
+        "categories": [1]
     }
-  },
+},
   {
     "model": "store.book",
     "pk": 27,
     "fields": {
-      "title": "Third quickly",
-      "description": "Either tough effect oil manager second.",
-      "isbn": "9780440735144",
-      "publisher": "Oxford Press",
-      "year_published": 1911,
-      "price": "98.24",
-      "stock": 60,
-      "authors": [
-        2
-      ]
+        "title": "Oliver Twist",
+        "description": "Social novel by Charles Dickens.",
+        "isbn": "9780141439747",
+        "publisher": "Richard Bentley",
+        "year_published": 1838,
+        "price": "12.99",
+        "stock": 30,
+        "authors": [14],
+        "categories": [1]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 28,
     "fields": {
-      "title": "Including",
-      "description": "Suggest argue miss arrive church rich consumer.",
-      "isbn": "9781172792832",
-      "publisher": "HarperCollins",
-      "year_published": 1973,
-      "price": "814.50",
-      "stock": 11,
-      "authors": [
-        13
-      ]
+        "title": "Slaughterhouse-Five",
+        "description": "Science fiction novel by Kurt Vonnegut.",
+        "isbn": "9780440180296",
+        "publisher": "Delacorte",
+        "year_published": 1969,
+        "price": "13.99",
+        "stock": 20,
+        "authors": [21],
+        "categories": [4]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 29,
     "fields": {
-      "title": "This figure black",
-      "description": "Life affect light body say have year.",
-      "isbn": "9780304223367",
-      "publisher": "Penguin Random House",
-      "year_published": 1917,
-      "price": "989.64",
-      "stock": 59,
-      "authors": [
-        10
-      ]
+        "title": "American Gods",
+        "description": "Fantasy novel by Neil Gaiman.",
+        "isbn": "9780062472106",
+        "publisher": "William Morrow",
+        "year_published": 2001,
+        "price": "15.99",
+        "stock": 25,
+        "authors": [30],
+        "categories": [3]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 30,
     "fields": {
-      "title": "Wall whatever every",
-      "description": "Knowledge education up camera third challenge paper.",
-      "isbn": "9780057107396",
-      "publisher": "Penguin Random House",
-      "year_published": 1927,
-      "price": "643.65",
-      "stock": 23,
-      "authors": [
-        10
-      ]
+        "title": "Neverwhere",
+        "description": "Fantasy novel by Neil Gaiman.",
+        "isbn": "9780060557812",
+        "publisher": "BBC Books",
+        "year_published": 1996,
+        "price": "13.99",
+        "stock": 25,
+        "authors": [30],
+        "categories": [3]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 31,
     "fields": {
-      "title": "Design ability",
-      "description": "Forward forward language believe true.",
-      "isbn": "9780682147453",
-      "publisher": "Simon & Schuster",
-      "year_published": 1948,
-      "price": "336.71",
-      "stock": 91,
-      "authors": [
-        18
-      ]
+        "title": "A Tale of Two Cities",
+        "description": "Historical novel by Charles Dickens.",
+        "isbn": "9780141439600",
+        "publisher": "Chapman & Hall",
+        "year_published": 1859,
+        "price": "13.99",
+        "stock": 30,
+        "authors": [14],
+        "categories": [1, 9]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 32,
     "fields": {
-      "title": "Majority fly skin",
-      "description": "Score near story research dream sound share.",
-      "isbn": "9780682378079",
-      "publisher": "HarperCollins",
-      "year_published": 1904,
-      "price": "190.55",
-      "stock": 25,
-      "authors": [
-        15
-      ]
+        "title": "Fahrenheit 451",
+        "description": "Dystopian novel by Ray Bradbury.",
+        "isbn": "9781451673319",
+        "publisher": "Ballantine Books",
+        "year_published": 1953,
+        "price": "11.99",
+        "stock": 25,
+        "authors": [2],
+        "categories": [4]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 33,
     "fields": {
-      "title": "Kitchen eat worker conference",
-      "description": "Opportunity theory for tree thousand can.",
-      "isbn": "9781586666606",
-      "publisher": "Oxford Press",
-      "year_published": 1985,
-      "price": "828.63",
-      "stock": 94,
-      "authors": [
-        2
-      ]
+        "title": "The Metamorphosis",
+        "description": "Novella by Franz Kafka.",
+        "isbn": "9780553213690",
+        "publisher": "Kurt Wolff Verlag",
+        "year_published": 1915,
+        "price": "9.99",
+        "stock": 20,
+        "authors": [18],
+        "categories": [1]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 34,
     "fields": {
-      "title": "There past",
-      "description": "Kitchen past rather girl.",
-      "isbn": "9780021824359",
-      "publisher": "Vintage",
-      "year_published": 1941,
-      "price": "355.66",
-      "stock": 31,
-      "authors": [
-        27
-      ]
+        "title": "Crime and Punishment",
+        "description": "Psychological novel by Fyodor Dostoevsky.",
+        "isbn": "9780140449136",
+        "publisher": "The Russian Messenger",
+        "year_published": 1866,
+        "price": "14.99",
+        "stock": 20,
+        "authors": [11],
+        "categories": [1, 5]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 35,
     "fields": {
-      "title": "Visit",
-      "description": "Tv current church wonder natural will may.",
-      "isbn": "9780889143975",
-      "publisher": "Penguin Random House",
-      "year_published": 1923,
-      "price": "912.54",
-      "stock": 86,
-      "authors": [
-        19
-      ]
+        "title": "Anna Karenina",
+        "description": "Novel by Alexander Pushkin.",
+        "isbn": "9780143035008",
+        "publisher": "Penguin Classics",
+        "year_published": 1877,
+        "price": "15.99",
+        "stock": 20,
+        "authors": [38],
+        "categories": [1, 6]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 36,
     "fields": {
-      "title": "Organization situation enough",
-      "description": "News minute area deep include along oil.",
-      "isbn": "9780522571622",
-      "publisher": "Hachette",
-      "year_published": 1957,
-      "price": "804.57",
-      "stock": 57,
-      "authors": [
-        22
-      ]
+        "title": "Frankenstein",
+        "description": "Gothic novel by Mary Shelley.",
+        "isbn": "9780143131847",
+        "publisher": "Lackington, Hughes, Harding, Mavor & Jones",
+        "year_published": 1818,
+        "price": "12.99",
+        "stock": 30,
+        "authors": [26],
+        "categories": [4]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 37,
     "fields": {
-      "title": "Ago money",
-      "description": "His anything ask expert account. Its score happy north.",
-      "isbn": "9780756065966",
-      "publisher": "Penguin Random House",
-      "year_published": 1945,
-      "price": "519.03",
-      "stock": 17,
-      "authors": [
-        19
-      ]
+        "title": "Dracula",
+        "description": "Gothic horror novel by Bram Stoker.",
+        "isbn": "9780141439846",
+        "publisher": "Archibald Constable and Company",
+        "year_published": 1897,
+        "price": "12.99",
+        "stock": 30,
+        "authors": [27],
+        "categories": [3, 5]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 38,
     "fields": {
-      "title": "Church suggest may radio",
-      "description": "Employee issue government woman.",
-      "isbn": "9780419548065",
-      "publisher": "Macmillan",
-      "year_published": 1996,
-      "price": "758.68",
-      "stock": 20,
-      "authors": [
-        20
-      ]
+        "title": "The Stranger",
+        "description": "Philosophical novel by Albert Camus.",
+        "isbn": "9780679720201",
+        "publisher": "Gallimard",
+        "year_published": 1942,
+        "price": "11.99",
+        "stock": 20,
+        "authors": [29],
+        "categories": [1]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 39,
     "fields": {
-      "title": "Close ground else",
-      "description": "Black pick learn her leave.",
-      "isbn": "9780640525064",
-      "publisher": "Oxford Press",
-      "year_published": 2015,
-      "price": "658.30",
-      "stock": 89,
-      "authors": [
-        24
-      ]
+        "title": "Beloved",
+        "description": "Pulitzer Prize-winning novel by Toni Morrison.",
+        "isbn": "9781400033416",
+        "publisher": "Alfred A. Knopf",
+        "year_published": 1987,
+        "price": "12.99",
+        "stock": 25,
+        "authors": [22],
+        "categories": [1]
     }
-  },
-  {
+}
+,
+ {
     "model": "store.book",
     "pk": 40,
     "fields": {
-      "title": "Kitchen themselves full",
-      "description": "Lawyer summer north stop. Among contain road win painting.",
-      "isbn": "9780786801213",
-      "publisher": "Macmillan",
-      "year_published": 1923,
-      "price": "923.52",
-      "stock": 62,
-      "authors": [
-        14
-      ]
+        "title": "The Bell Jar",
+        "description": "Semi-autobiographical novel by Sylvia Plath.",
+        "isbn": "9780060837020",
+        "publisher": "Heinemann",
+        "year_published": 1963,
+        "price": "12.99",
+        "stock": 20,
+        "authors": [28],
+        "categories": [1]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 41,
     "fields": {
-      "title": "Upon structure phone",
-      "description": "Learn if attention of.",
-      "isbn": "9780290384981",
-      "publisher": "Hachette",
-      "year_published": 1989,
-      "price": "139.61",
-      "stock": 13,
-      "authors": [
-        26
-      ]
+        "title": "Twenty Thousand Leagues Under the Seas",
+        "description": "Science fiction adventure novel by Jules Verne.",
+        "isbn": "9780451531698",
+        "publisher": "Pierre-Jules Hetzel",
+        "year_published": 1870,
+        "price": "13.99",
+        "stock": 25,
+        "authors": [23],
+        "categories": [4]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 42,
     "fields": {
-      "title": "Son her cover",
-      "description": "Republican near everyone dog current travel.",
-      "isbn": "9780783089447",
-      "publisher": "Bloomsbury",
-      "year_published": 1916,
-      "price": "947.53",
-      "stock": 42,
-      "authors": [
-        2
-      ]
+        "title": "Journey to the Center of the Earth",
+        "description": "Science fiction novel by Jules Verne.",
+        "isbn": "9780553213973",
+        "publisher": "Pierre-Jules Hetzel",
+        "year_published": 1864,
+        "price": "13.99",
+        "stock": 25,
+        "authors": [23],
+        "categories": [4]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 43,
     "fields": {
-      "title": "Forward western",
-      "description": "Glass us talk floor certain discussion sound lose.",
-      "isbn": "9780971051126",
-      "publisher": "Simon & Schuster",
-      "year_published": 1923,
-      "price": "308.26",
-      "stock": 80,
-      "authors": [
-        3
-      ]
+        "title": "Around the World in Eighty Days",
+        "description": "Adventure novel by Jules Verne.",
+        "isbn": "9780553213560",
+        "publisher": "Pierre-Jules Hetzel",
+        "year_published": 1873,
+        "price": "12.99",
+        "stock": 25,
+        "authors": [23],
+        "categories": [4]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 44,
     "fields": {
-      "title": "Student thousand",
-      "description": "Really feel continue response may.",
-      "isbn": "9781378894927",
-      "publisher": "Scholastic",
-      "year_published": 1951,
-      "price": "692.43",
-      "stock": 47,
-      "authors": [
-        9
-      ]
+        "title": "The War of the Worlds",
+        "description": "Science fiction novel by H.G. Wells.",
+        "isbn": "9780451530653",
+        "publisher": "William Heinemann",
+        "year_published": 1898,
+        "price": "11.99",
+        "stock": 20,
+        "authors": [15],
+        "categories": [4]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 45,
     "fields": {
-      "title": "Community them",
-      "description": "Option would style military human personal movement tough.",
-      "isbn": "9780748926633",
-      "publisher": "Tor Books",
-      "year_published": 1902,
-      "price": "931.99",
-      "stock": 93,
-      "authors": [
-        18
-      ]
+        "title": "The Time Machine",
+        "description": "Science fiction novella by H.G. Wells.",
+        "isbn": "9780451530707",
+        "publisher": "William Heinemann",
+        "year_published": 1895,
+        "price": "11.99",
+        "stock": 20,
+        "authors": [15],
+        "categories": [4]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 46,
     "fields": {
-      "title": "Body discuss painting",
-      "description": "Several yourself today mother.",
-      "isbn": "9781866667224",
-      "publisher": "Hachette",
-      "year_published": 1948,
-      "price": "789.22",
-      "stock": 40,
-      "authors": [
-        14
-      ]
+        "title": "The Invisible Man",
+        "description": "Science fiction novel by H.G. Wells.",
+        "isbn": "9780451531674",
+        "publisher": "William Heinemann",
+        "year_published": 1897,
+        "price": "11.99",
+        "stock": 20,
+        "authors": [15],
+        "categories": [4]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 47,
     "fields": {
-      "title": "Foot",
-      "description": "Meet myself staff someone.",
-      "isbn": "9781148711522",
-      "publisher": "Oxford Press",
-      "year_published": 1913,
-      "price": "982.19",
-      "stock": 79,
-      "authors": [
-        9
-      ]
+        "title": "The Island of Doctor Moreau",
+        "description": "Science fiction novel by H.G. Wells.",
+        "isbn": "9780451531889",
+        "publisher": "William Heinemann",
+        "year_published": 1896,
+        "price": "11.99",
+        "stock": 20,
+        "authors": [15],
+        "categories": [4]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 48,
     "fields": {
-      "title": "Agree continue among",
-      "description": "Pass price summer off southern.",
-      "isbn": "9780651781299",
-      "publisher": "Penguin Random House",
-      "year_published": 2009,
-      "price": "889.29",
-      "stock": 63,
-      "authors": [
-        14
-      ]
+        "title": "Lord of the Flies",
+        "description": "Allegorical novel by William Golding.",
+        "isbn": "9780399501487",
+        "publisher": "Faber and Faber",
+        "year_published": 1954,
+        "price": "13.99",
+        "stock": 25,
+        "authors": [25],
+        "categories": [1]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 49,
     "fields": {
-      "title": "Necessary pull",
-      "description": "Reality call chair people teach money.",
-      "isbn": "9780344713330",
-      "publisher": "Simon & Schuster",
-      "year_published": 1917,
-      "price": "468.53",
-      "stock": 40,
-      "authors": [
-        10
-      ]
+        "title": "Rebecca",
+        "description": "Gothic novel by Daphne du Maurier.",
+        "isbn": "9780380730407",
+        "publisher": "Victor Gollancz Ltd",
+        "year_published": 1938,
+        "price": "12.99",
+        "stock": 20,
+        "authors": [20],
+        "categories": [5]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 50,
     "fields": {
-      "title": "Into myself lose",
-      "description": "According well medical structure. Door want law thus.",
-      "isbn": "9781894963626",
-      "publisher": "Hachette",
-      "year_published": 1970,
-      "price": "128.12",
-      "stock": 39,
-      "authors": [
-        7
-      ]
+        "title": "Catch-22",
+        "description": "Satirical war novel by Joseph Heller.",
+        "isbn": "9781451626650",
+        "publisher": "Simon & Schuster",
+        "year_published": 1961,
+        "price": "13.99",
+        "stock": 25,
+        "authors": [17],
+        "categories": [1]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 51,
     "fields": {
-      "title": "Woman great",
-      "description": "Water grow that. Read practice tonight. Book far call who.",
-      "isbn": "9781730088957",
-      "publisher": "Tor Books",
-      "year_published": 1989,
-      "price": "138.57",
-      "stock": 55,
-      "authors": [
-        2
-      ]
+        "title": "Heart of Darkness",
+        "description": "Novella by Joseph Conrad.",
+        "isbn": "9780486264646",
+        "publisher": "Blackwood's Magazine",
+        "year_published": 1899,
+        "price": "10.99",
+        "stock": 20,
+        "authors": [16],
+        "categories": [1]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 52,
     "fields": {
-      "title": "Direction",
-      "description": "Adult end main rock avoid lot garden.",
-      "isbn": "9781573499613",
-      "publisher": "Hachette",
-      "year_published": 1939,
-      "price": "17.58",
-      "stock": 75,
-      "authors": [
-        27
-      ]
+        "title": "The Brothers Karamazov",
+        "description": "Philosophical novel by Fyodor Dostoevsky.",
+        "isbn": "9780374528379",
+        "publisher": "The Russian Messenger",
+        "year_published": 1880,
+        "price": "15.99",
+        "stock": 20,
+        "authors": [11],
+        "categories": [1, 5]
     }
-  },
+}
+,
   {
     "model": "store.book",
     "pk": 53,
     "fields": {
-      "title": "Management drop professor",
-      "description": "Might thank alone learn rather exactly sense.",
-      "isbn": "9781340567873",
-      "publisher": "Vintage",
-      "year_published": 1983,
-      "price": "899.21",
-      "stock": 38,
-      "authors": [
-        21
-      ]
+        "title": "The Sun Also Rises",
+        "description": "Novel by Ernest Hemingway.",
+        "isbn": "9780743297332",
+        "publisher": "Scribner",
+        "year_published": 1926,
+        "price": "12.99",
+        "stock": 20,
+        "authors": [6],
+        "categories": [1]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 54,
     "fields": {
-      "title": "Accept hand skin",
-      "description": "Fish evening manage determine woman see.",
-      "isbn": "9780769780115",
-      "publisher": "Vintage",
-      "year_published": 1954,
-      "price": "433.92",
-      "stock": 21,
-      "authors": [
-        24
-      ]
+        "title": "Of Mice and Men",
+        "description": "Novella by John Steinbeck.",
+        "isbn": "9780140177398",
+        "publisher": "Covici Friede",
+        "year_published": 1937,
+        "price": "11.99",
+        "stock": 25,
+        "authors": [9],
+        "categories": [1]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 55,
     "fields": {
-      "title": "Population chair",
-      "description": "Among cut may statement group it month.",
-      "isbn": "9781753574277",
-      "publisher": "Macmillan",
-      "year_published": 1999,
-      "price": "223.11",
-      "stock": 74,
-      "authors": [
-        30
-      ]
+        "title": "East of Eden",
+        "description": "Novel by John Steinbeck.",
+        "isbn": "9780142004234",
+        "publisher": "Viking Press",
+        "year_published": 1952,
+        "price": "13.99",
+        "stock": 20,
+        "authors": [9],
+        "categories": [1]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 56,
     "fields": {
-      "title": "Bar chance although",
-      "description": "Sit tell far try. Everybody challenge anything.",
-      "isbn": "9780133295085",
-      "publisher": "Bloomsbury",
-      "year_published": 2000,
-      "price": "375.79",
-      "stock": 46,
-      "authors": [
-        4
-      ]
+        "title": "Cannery Row",
+        "description": "Novel by John Steinbeck.",
+        "isbn": "9780140177381",
+        "publisher": "Viking Press",
+        "year_published": 1945,
+        "price": "12.99",
+        "stock": 20,
+        "authors": [9],
+        "categories": [1]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 57,
     "fields": {
-      "title": "Item three few",
-      "description": "Teach draw marriage positive. Help degree type per trial.",
-      "isbn": "9780912679976",
-      "publisher": "Penguin Random House",
-      "year_published": 1984,
-      "price": "888.27",
-      "stock": 32,
-      "authors": [
-        20
-      ]
+        "title": "The Grapes of Wrath",
+        "description": "Pulitzer Prize-winning novel by John Steinbeck.",
+        "isbn": "9780143039433",
+        "publisher": "The Viking Press-James Lloyd",
+        "year_published": 1939,
+        "price": "14.99",
+        "stock": 25,
+        "authors": [9],
+        "categories": [1]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 58,
     "fields": {
-      "title": "They model",
-      "description": "Professional much edge.",
-      "isbn": "9781063549309",
-      "publisher": "Hachette",
-      "year_published": 1992,
-      "price": "454.91",
-      "stock": 100,
-      "authors": [
-        18
-      ]
+        "title": "The Trial",
+        "description": "Novel by Franz Kafka.",
+        "isbn": "9780805210408",
+        "publisher": "Verlag Die Schmiede",
+        "year_published": 1925,
+        "price": "12.99",
+        "stock": 20,
+        "authors": [18],
+        "categories": [1]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 59,
     "fields": {
-      "title": "Ability per or",
-      "description": "Sit risk professional kid page.",
-      "isbn": "9780030788772",
-      "publisher": "HarperCollins",
-      "year_published": 1993,
-      "price": "428.26",
-      "stock": 31,
-      "authors": [
-        20
-      ]
+        "title": "The Castle",
+        "description": "Novel by Franz Kafka.",
+        "isbn": "9780805211061",
+        "publisher": "Kurt Wolff Verlag",
+        "year_published": 1926,
+        "price": "12.99",
+        "stock": 20,
+        "authors": [18],
+        "categories": [1]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 60,
     "fields": {
-      "title": "Meet radio memory",
-      "description": "Worker gun kind road. Us talk whole enough if sound just.",
-      "isbn": "9781561644025",
-      "publisher": "Scholastic",
-      "year_published": 2022,
-      "price": "209.07",
-      "stock": 98,
-      "authors": [
-        2
-      ]
+        "title": "The Plague",
+        "description": "Novel by Albert Camus.",
+        "isbn": "9780679720218",
+        "publisher": "Gallimard",
+        "year_published": 1947,
+        "price": "12.99",
+        "stock": 20,
+        "authors": [29],
+        "categories": [1]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 61,
     "fields": {
-      "title": "Hair thus",
-      "description": "You they miss treatment.",
-      "isbn": "9781767030929",
-      "publisher": "Vintage",
-      "year_published": 1962,
-      "price": "956.08",
-      "stock": 17,
-      "authors": [
-        19
-      ]
+        "title": "No Exit",
+        "description": "Existentialist play by Jean-Paul Sartre.",
+        "isbn": "9780679725169",
+        "publisher": "Gallimard",
+        "year_published": 1944,
+        "price": "11.99",
+        "stock": 15,
+        "authors": [4],
+        "categories": [1]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 62,
     "fields": {
-      "title": "Catch into",
-      "description": "Deal newspaper wish like.",
-      "isbn": "9780243828883",
-      "publisher": "Oxford Press",
-      "year_published": 1946,
-      "price": "902.37",
-      "stock": 92,
-      "authors": [
-        8
-      ]
+        "title": "The Second Sex",
+        "description": "Foundational feminist text by Simone de Beauvoir.",
+        "isbn": "9780307277787",
+        "publisher": "Gallimard",
+        "year_published": 1949,
+        "price": "15.99",
+        "stock": 15,
+        "authors": [4],
+        "categories": [11]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 63,
     "fields": {
-      "title": "Question themselves",
-      "description": "Rule smile remain. Impact daughter though after.",
-      "isbn": "9781087414430",
-      "publisher": "Scholastic",
-      "year_published": 1904,
-      "price": "277.87",
-      "stock": 35,
-      "authors": [
-        8
-      ]
+        "title": "The Myth of Sisyphus",
+        "description": "Philosophical essay by Albert Camus.",
+        "isbn": "9780141023991",
+        "publisher": "Gallimard",
+        "year_published": 1942,
+        "price": "11.99",
+        "stock": 15,
+        "authors": [29],
+        "categories": [1]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 64,
     "fields": {
-      "title": "Floor find",
-      "description": "Whole book area visit certain product by world.",
-      "isbn": "9781378319949",
-      "publisher": "Penguin Random House",
-      "year_published": 1944,
-      "price": "565.78",
-      "stock": 4,
-      "authors": [
-        13
-      ]
+        "title": "The Outsiders",
+        "description": "Young adult novel by S.E. Hinton.",
+        "isbn": "9780143039853",
+        "publisher": "Viking Press",
+        "year_published": 1967,
+        "price": "11.99",
+        "stock": 20,
+        "authors": [22],
+        "categories": [8]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 65,
     "fields": {
-      "title": "Adult career likely",
-      "description": "Sometimes reach sea fight single wife within.",
-      "isbn": "9781911001454",
-      "publisher": "Simon & Schuster",
-      "year_published": 1916,
-      "price": "540.86",
-      "stock": 62,
-      "authors": [
-        28
-      ]
+        "title": "The Little Prince",
+        "description": "Novella by Antoine de Saint-Exupéry.",
+        "isbn": "9780156012195",
+        "publisher": "Reynal & Hitchcock",
+        "year_published": 1943,
+        "price": "10.99",
+        "stock": 20,
+        "authors": [19],
+        "categories": [7, 8]
     }
-  },
+}
+,
   {
     "model": "store.book",
     "pk": 66,
     "fields": {
-      "title": "Admit population effort",
-      "description": "Him matter simple collection artist perform.",
-      "isbn": "9781564743459",
-      "publisher": "Tor Books",
-      "year_published": 1958,
-      "price": "881.55",
-      "stock": 86,
-      "authors": [
-        29
-      ]
+        "title": "Invisible Cities",
+        "description": "Novel by Italo Calvino.",
+        "isbn": "9780156453806",
+        "publisher": "Giulio Einaudi Editore",
+        "year_published": 1972,
+        "price": "12.99",
+        "stock": 15,
+        "authors": [28],
+        "categories": [1]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 67,
     "fields": {
-      "title": "Can not beyond",
-      "description": "Face thank carry it everyone animal decade.",
-      "isbn": "9780358478393",
-      "publisher": "Tor Books",
-      "year_published": 1980,
-      "price": "234.80",
-      "stock": 40,
-      "authors": [
-        1
-      ]
+        "title": "If on a winter's night a traveler",
+        "description": "Novel by Italo Calvino.",
+        "isbn": "9780156439619",
+        "publisher": "Giulio Einaudi Editore",
+        "year_published": 1979,
+        "price": "12.99",
+        "stock": 15,
+        "authors": [28],
+        "categories": [1]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 68,
     "fields": {
-      "title": "Cup seat someone",
-      "description": "Cold test book ability none wait.",
-      "isbn": "9780362581294",
-      "publisher": "Tor Books",
-      "year_published": 1967,
-      "price": "296.96",
-      "stock": 69,
-      "authors": [
-        23
-      ]
+        "title": "The Name of the Rose",
+        "description": "Historical mystery novel by Umberto Eco.",
+        "isbn": "9780156001311",
+        "publisher": "Bompiani",
+        "year_published": 1980,
+        "price": "14.99",
+        "stock": 20,
+        "authors": [28],
+        "categories": [1, 5]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 69,
     "fields": {
-      "title": "Require short future",
-      "description": "Leader now moment Democrat indicate rule activity.",
-      "isbn": "9780988443921",
-      "publisher": "Oxford Press",
-      "year_published": 1918,
-      "price": "578.23",
-      "stock": 39,
-      "authors": [
-        24
-      ]
+        "title": "Foucault's Pendulum",
+        "description": "Novel by Umberto Eco.",
+        "isbn": "9780156032971",
+        "publisher": "Bompiani",
+        "year_published": 1988,
+        "price": "15.99",
+        "stock": 20,
+        "authors": [28],
+        "categories": [1]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 70,
     "fields": {
-      "title": "Determine but foot",
-      "description": "Sell scientist work seat form seat.",
-      "isbn": "9781293764534",
-      "publisher": "HarperCollins",
-      "year_published": 1900,
-      "price": "561.98",
-      "stock": 77,
-      "authors": [
-        24
-      ]
+        "title": "The Book Thief",
+        "description": "Novel by Markus Zusak.",
+        "isbn": "9780375842208",
+        "publisher": "Picador",
+        "year_published": 2005,
+        "price": "13.99",
+        "stock": 25,
+        "authors": [22],
+        "categories": [1, 8]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 71,
     "fields": {
-      "title": "My field husband",
-      "description": "Almost western teacher game else off realize.",
-      "isbn": "9780496262380",
-      "publisher": "HarperCollins",
-      "year_published": 1962,
-      "price": "250.38",
-      "stock": 34,
-      "authors": [
-        8
-      ]
+        "title": "Life of Pi",
+        "description": "Novel by Yann Martel.",
+        "isbn": "9780156027328",
+        "publisher": "Knopf Canada",
+        "year_published": 2001,
+        "price": "13.99",
+        "stock": 20,
+        "authors": [24],
+        "categories": [1]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 72,
     "fields": {
-      "title": "Stay whom",
-      "description": "Must nice research might many hold.",
-      "isbn": "9780618924257",
-      "publisher": "Penguin Random House",
-      "year_published": 1923,
-      "price": "344.43",
-      "stock": 59,
-      "authors": [
-        3
-      ]
+        "title": "Memoirs of a Geisha",
+        "description": "Historical novel by Arthur Golden.",
+        "isbn": "9780679781585",
+        "publisher": "Alfred A. Knopf",
+        "year_published": 1997,
+        "price": "13.99",
+        "stock": 20,
+        "authors": [20],
+        "categories": [1, 6]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 73,
     "fields": {
-      "title": "Can rule argue",
-      "description": "Young collection civil yourself positive nor future.",
-      "isbn": "9781033047866",
-      "publisher": "Tor Books",
-      "year_published": 1925,
-      "price": "218.01",
-      "stock": 90,
-      "authors": [
-        20
-      ]
+        "title": "Norwegian Wood",
+        "description": "Novel by Haruki Murakami.",
+        "isbn": "9780375704025",
+        "publisher": "Kodansha",
+        "year_published": 1987,
+        "price": "13.99",
+        "stock": 20,
+        "authors": [24],
+        "categories": [1, 6]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 74,
     "fields": {
-      "title": "Nor simply",
-      "description": "Generation indeed up range forget. Upon pull than window.",
-      "isbn": "9781583383889",
-      "publisher": "Scholastic",
-      "year_published": 1942,
-      "price": "117.78",
-      "stock": 52,
-      "authors": [
-        24
-      ]
+        "title": "Kafka on the Shore",
+        "description": "Novel by Haruki Murakami.",
+        "isbn": "9781400079278",
+        "publisher": "Shinchosha",
+        "year_published": 2002,
+        "price": "14.99",
+        "stock": 20,
+        "authors": [24],
+        "categories": [1, 3]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 75,
     "fields": {
-      "title": "Space focus measure",
-      "description": "Could series before teacher give sing black.",
-      "isbn": "9780973146530",
-      "publisher": "Scholastic",
-      "year_published": 1983,
-      "price": "816.98",
-      "stock": 17,
-      "authors": [
-        20
-      ]
+        "title": "1Q84",
+        "description": "Dystopian novel by Haruki Murakami.",
+        "isbn": "9780307593313",
+        "publisher": "Shinchosha",
+        "year_published": 2009,
+        "price": "18.99",
+        "stock": 20,
+        "authors": [24],
+        "categories": [1, 4]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 76,
     "fields": {
-      "title": "Note land",
-      "description": "Decade no compare man other no.",
-      "isbn": "9781355192220",
-      "publisher": "Simon & Schuster",
-      "year_published": 2007,
-      "price": "979.82",
-      "stock": 1,
-      "authors": [
-        6
-      ]
+        "title": "Men Without Women",
+        "description": "Short story collection by Haruki Murakami.",
+        "isbn": "9780385543828",
+        "publisher": "Shinchosha",
+        "year_published": 2014,
+        "price": "12.99",
+        "stock": 20,
+        "authors": [24],
+        "categories": [1]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 77,
     "fields": {
-      "title": "Enough thing",
-      "description": "Add good rule he case cover management.",
-      "isbn": "9781431100910",
-      "publisher": "Hachette",
-      "year_published": 1975,
-      "price": "744.11",
-      "stock": 11,
-      "authors": [
-        8
-      ]
+        "title": "South of the Border, West of the Sun",
+        "description": "Novel by Haruki Murakami.",
+        "isbn": "9780679767398",
+        "publisher": "Shinchosha",
+        "year_published": 1992,
+        "price": "12.99",
+        "stock": 20,
+        "authors": [24],
+        "categories": [1, 6]
     }
-  },
-  {
+},
+{
     "model": "store.book",
     "pk": 78,
     "fields": {
-      "title": "Produce who",
-      "description": "Thought fly training shoulder central whom.",
-      "isbn": "9781694865441",
-      "publisher": "Scholastic",
-      "year_published": 1923,
-      "price": "552.05",
-      "stock": 77,
-      "authors": [
-        21
-      ]
+        "title": "Sputnik Sweetheart",
+        "description": "Novel by Haruki Murakami.",
+        "isbn": "9780375726058",
+        "publisher": "Shinchosha",
+        "year_published": 1999,
+        "price": "12.99",
+        "stock": 20,
+        "authors": [24],
+        "categories": [1, 6]
     }
-  },
-  {
-    "model": "store.book",
-    "pk": 79,
-    "fields": {
-      "title": "Fly win",
-      "description": "Affect out black thus. Commercial include because.",
-      "isbn": "9780036896594",
-      "publisher": "HarperCollins",
-      "year_published": 1973,
-      "price": "633.22",
-      "stock": 96,
-      "authors": [
-        4
-      ]
-    }
-  },
-  {
-    "model": "store.book",
-    "pk": 80,
-    "fields": {
-      "title": "Spring court loss",
-      "description": "Focus meeting provide employee church management movement.",
-      "isbn": "9780810952805",
-      "publisher": "Hachette",
-      "year_published": 1973,
-      "price": "113.17",
-      "stock": 13,
-      "authors": [
-        4
-      ]
-    }
-  },
-  {
-    "model": "store.book",
-    "pk": 81,
-    "fields": {
-      "title": "Whatever practice close",
-      "description": "Out about white eight until reason teacher natural.",
-      "isbn": "9780435061081",
-      "publisher": "Macmillan",
-      "year_published": 1925,
-      "price": "61.69",
-      "stock": 86,
-      "authors": [
-        24
-      ]
-    }
-  },
-  {
-    "model": "store.book",
-    "pk": 82,
-    "fields": {
-      "title": "Have Democrat",
-      "description": "Together less exactly blue win off live.",
-      "isbn": "9781783882380",
-      "publisher": "Bloomsbury",
-      "year_published": 1963,
-      "price": "365.33",
-      "stock": 35,
-      "authors": [
-        2
-      ]
-    }
-  },
-  {
-    "model": "store.book",
-    "pk": 83,
-    "fields": {
-      "title": "While history",
-      "description": "Issue agreement edge from letter factor page.",
-      "isbn": "9781132973202",
-      "publisher": "Tor Books",
-      "year_published": 2009,
-      "price": "502.01",
-      "stock": 11,
-      "authors": [
-        15
-      ]
-    }
-  },
-  {
-    "model": "store.book",
-    "pk": 84,
-    "fields": {
-      "title": "Site none",
-      "description": "Guy seven improve.",
-      "isbn": "9780369634276",
-      "publisher": "Tor Books",
-      "year_published": 1950,
-      "price": "318.41",
-      "stock": 41,
-      "authors": [
-        26
-      ]
-    }
-  },
-  {
-    "model": "store.book",
-    "pk": 85,
-    "fields": {
-      "title": "Foot always let",
-      "description": "Another respond so training recognize.",
-      "isbn": "9781591581772",
-      "publisher": "Penguin Random House",
-      "year_published": 1994,
-      "price": "669.61",
-      "stock": 66,
-      "authors": [
-        15
-      ]
-    }
-  },
-  {
-    "model": "store.book",
-    "pk": 86,
-    "fields": {
-      "title": "At much",
-      "description": "Section value wonder. Blood very but exist step go.",
-      "isbn": "9781771000345",
-      "publisher": "Tor Books",
-      "year_published": 1977,
-      "price": "257.39",
-      "stock": 24,
-      "authors": [
-        5
-      ]
-    }
-  },
-  {
-    "model": "store.book",
-    "pk": 87,
-    "fields": {
-      "title": "Media study",
-      "description": "Consumer find affect sort although step.",
-      "isbn": "9780087550209",
-      "publisher": "Vintage",
-      "year_published": 1956,
-      "price": "132.23",
-      "stock": 50,
-      "authors": [
-        21
-      ]
-    }
-  },
-  {
-    "model": "store.book",
-    "pk": 88,
-    "fields": {
-      "title": "Spring face",
-      "description": "Because law summer father. Worker machine produce past.",
-      "isbn": "9781490647814",
-      "publisher": "Vintage",
-      "year_published": 1924,
-      "price": "877.22",
-      "stock": 15,
-      "authors": [
-        4
-      ]
-    }
-  },
-  {
-    "model": "store.book",
-    "pk": 89,
-    "fields": {
-      "title": "Child",
-      "description": "Everyone close choice sing.",
-      "isbn": "9780114287986",
-      "publisher": "Scholastic",
-      "year_published": 1934,
-      "price": "445.97",
-      "stock": 5,
-      "authors": [
-        15
-      ]
-    }
-  },
-  {
-    "model": "store.book",
-    "pk": 90,
-    "fields": {
-      "title": "Quite choose public",
-      "description": "Picture police three late business fine new for.",
-      "isbn": "9780852738252",
-      "publisher": "Penguin Random House",
-      "year_published": 1916,
-      "price": "391.74",
-      "stock": 26,
-      "authors": [
-        4
-      ]
-    }
-  },
-  {
-    "model": "store.book",
-    "pk": 91,
-    "fields": {
-      "title": "Evidence forward rich",
-      "description": "Goal message ask cost ok word. Him focus seek hand speak.",
-      "isbn": "9781700823403",
-      "publisher": "HarperCollins",
-      "year_published": 1976,
-      "price": "513.32",
-      "stock": 84,
-      "authors": [
-        16
-      ]
-    }
-  },
-  {
-    "model": "store.book",
-    "pk": 92,
-    "fields": {
-      "title": "Especially",
-      "description": "Edge certainly military control different range.",
-      "isbn": "9780691396996",
-      "publisher": "Penguin Random House",
-      "year_published": 1931,
-      "price": "933.97",
-      "stock": 12,
-      "authors": [
-        9
-      ]
-    }
-  },
-  {
-    "model": "store.book",
-    "pk": 93,
-    "fields": {
-      "title": "Stand type necessary",
-      "description": "Minute commercial term new.",
-      "isbn": "9780402374442",
-      "publisher": "Hachette",
-      "year_published": 2023,
-      "price": "224.30",
-      "stock": 62,
-      "authors": [
-        24
-      ]
-    }
-  },
-  {
-    "model": "store.book",
-    "pk": 94,
-    "fields": {
-      "title": "Impact mouth same",
-      "description": "Letter reach away training those. Another blood better bar.",
-      "isbn": "9781717506870",
-      "publisher": "Simon & Schuster",
-      "year_published": 1956,
-      "price": "801.30",
-      "stock": 78,
-      "authors": [
-        2
-      ]
-    }
-  },
-  {
-    "model": "store.book",
-    "pk": 95,
-    "fields": {
-      "title": "Term your should",
-      "description": "Seven weight position lead decision cold peace nor.",
-      "isbn": "9781159777104",
-      "publisher": "Bloomsbury",
-      "year_published": 2002,
-      "price": "916.86",
-      "stock": 92,
-      "authors": [
-        2
-      ]
-    }
-  },
-  {
-    "model": "store.book",
-    "pk": 96,
-    "fields": {
-      "title": "Gun Congress mind",
-      "description": "Difficult already decision return not doctor same charge.",
-      "isbn": "9780515989168",
-      "publisher": "Bloomsbury",
-      "year_published": 1983,
-      "price": "195.67",
-      "stock": 26,
-      "authors": [
-        11
-      ]
-    }
-  },
-  {
-    "model": "store.book",
-    "pk": 97,
-    "fields": {
-      "title": "Charge by",
-      "description": "Generation water game popular face.",
-      "isbn": "9781735112169",
-      "publisher": "Scholastic",
-      "year_published": 2019,
-      "price": "478.55",
-      "stock": 3,
-      "authors": [
-        24
-      ]
-    }
-  },
-  {
-    "model": "store.book",
-    "pk": 98,
-    "fields": {
-      "title": "Image bit way",
-      "description": "Eight recently decision group agent born artist.",
-      "isbn": "9780858027985",
-      "publisher": "Simon & Schuster",
-      "year_published": 1995,
-      "price": "307.61",
-      "stock": 5,
-      "authors": [
-        28
-      ]
-    }
-  },
-  {
-    "model": "store.book",
-    "pk": 99,
-    "fields": {
-      "title": "Day sit risk",
-      "description": "Interview past rock line into appear with.",
-      "isbn": "9781493524884",
-      "publisher": "Tor Books",
-      "year_published": 2008,
-      "price": "410.55",
-      "stock": 11,
-      "authors": [
-        15
-      ]
-    }
-  },
-  {
-    "model": "store.book",
-    "pk": 100,
-    "fields": {
-      "title": "Power material task",
-      "description": "Keep spring score note right first detail.",
-      "isbn": "9781119587491",
-      "publisher": "HarperCollins",
-      "year_published": 2001,
-      "price": "188.44",
-      "stock": 64,
-      "authors": [
-        20
-      ]
-    }
-  }
+}
 ]

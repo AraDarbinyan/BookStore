@@ -37,3 +37,5 @@ This project is intended as a portfolio piece and learning project for a junior 
 - `/login/` – login form
 - `/register/` – register form
 - `/progile/` – profile page
+- `/cart/` – user's cart
+- `/thank-you/` – thank you for ordering

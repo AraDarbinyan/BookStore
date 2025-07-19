@@ -35,8 +35,20 @@
     <a href="{% url 'all_books' %}" class="btn-show-all">Show All Books</a>
 </div>
 
-<div>
-    <h2>New</h2>
+<h2>New Books</h2>
+<div class="book-grid">
+    {% for book in new_books %}
+        <div class="book-card">
+            <h3>{{ book.title }}</h3>
+            <p>Author:
+                {% for author in book.authors.all %}
+                    {{ author.name }}{% if not forloop.last %}, {% endif %}
+                {% endfor %}
+            </p>
+            <p>Price: ${{ book.price }}</p>
+            <a href="{% url 'book_detail' book.id %}">View Details</a>
+        </div>
+    {% endfor %}
 </div>
 
 <div>

@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .forms import RegisterForm
-from .models import Book, Cart, CartItem, Order
+from django.db.models import Q
+from .models import Book, Cart, CartItem, Order, Category
 from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import AuthenticationForm
@@ -8,13 +9,40 @@ from django.views.decorators.http import require_POST
 
 # Create your views here.
 def index(request):
-    books = Book.objects.all()[:12]
-    return render(request, 'store/index.html', {'books': books})
+    books = Book.objects.all()[:14]
+    categories = Category.objects.all()
+    new_books = Book.objects.all().order_by('-id')[:7]
+    return render(request, 'store/index.html', {
+        'books': books, 
+        'categories': categories,
+        'new_books': new_books
+        })
 
 
 def all_books_view(request):
+    search_query = request.GET.get('q', '')
+    category_id = request.GET.get('category')
+
     books = Book.objects.all()
-    return render(request, 'store/all_books.html', {'books': books})
+
+    if search_query:
+        books = books.filter(
+            Q(title__icontains=search_query) |
+            Q(description__icontains=search_query)
+        )
+
+    if category_id:
+        books = Book.objects.filter(categories__id=category_id)
+
+
+    categories = Category.objects.all()
+
+    return render(request, 'store/all_books.html', {
+        'books': books,
+        'categories': categories,
+        'search_query': search_query,
+        'selected_category': int(category_id) if category_id else None,
+    })
 
 
 def book_detail_view(request, pk):
