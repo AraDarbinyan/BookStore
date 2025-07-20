@@ -11,6 +11,9 @@
 {% block content %}
 <div class="book-detail">
   <h2>{{ book.title }}</h2>
+  {% if book.average_rating %}
+      <p>Average Rating: {{ book.average_rating }} / 5</p>
+  {% endif %}
   <p><strong>Author(s):</strong>
     {% for author in book.authors.all %}
       {{ author.name }}{% if not forloop.last %}, {% endif %}
@@ -25,6 +28,21 @@
     {% csrf_token %}
     <button type="submit" class="add-to-cart-btn">Add to cart</button>
   </form>
+  
+  <div class="reviews-list">
+    <h3>Reviews:</h3>
+    {% for review in book.reviews.all %}
+        <div class="review">
+            <div class="review-rating">Rating: {{ review.rating }} / 5</div>
+            <p class="review-text">{{ review.text }}</p>
+        </div>
+    {% empty %}
+        <p>No reviews yet.</p>
+    {% endfor %}
+  </div>
+
+  <a href="{% url 'add_review' book.id %}">Leave a review</a> <br>
+
   <a href="{% url 'index' %}" class="btn-back">← Back to Home</a>
 </div>
 {% endblock %}

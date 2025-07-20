@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .forms import RegisterForm
+from .forms import RegisterForm, ReviewForm
 from django.db.models import Q
-from .models import Book, Cart, CartItem, Order, Category, Customer
+from .models import Book, Cart, CartItem, Order, Category, Customer, Review
+from django.contrib import messages
 from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import AuthenticationForm
@@ -163,3 +164,26 @@ def profile_view(request):
         customer = Customer.objects.create(user=request.user)
     orders = Order.objects.filter(customer=customer).order_by('-ordered_at').prefetch_related('cart__items__book')
     return render(request, 'store/profile.html', {'customer': customer, 'orders': orders})
+
+
+@login_required
+def add_review(request, book_id):
+    customer = request.user.customer
+    book = get_object_or_404(Book, id=book_id)
+
+    if Review.objects.filter(book=book, customer=customer).exists():
+        messages.warning(request, 'You have already left a review for this book.')
+        return redirect( 'book_detail', pk=book.id)
+
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.customer = customer
+            review.book = book
+            review.save()
+            return redirect('book_detail', pk=book.id)
+    else:
+        form = ReviewForm()
+
+    return render(request, 'store/add_review.html', {'form': form, 'book': book})

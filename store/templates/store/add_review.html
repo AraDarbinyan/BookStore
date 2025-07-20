@@ -1,0 +1,23 @@
+{% extends 'store/base.html' %}
+{% load static %}
+
+{% block title %}Add review{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'store/css/add_review.css' %}">
+{% endblock %}
+
+
+{% block content %}
+<div class="review-form">
+    <h2>Leave a review for "{{ book.title }}"</h2>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit Review</button>
+    </form>
+
+    <a href="{% url 'book_detail' book.id %}">Back to book</a>
+</div>
+{% endblock %}

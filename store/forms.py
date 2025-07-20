@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.models import User
-from .models import Customer
+from .models import Customer, Review
 
 class RegisterForm(forms.ModelForm):
     password1 = forms.CharField(widget=forms.PasswordInput)
@@ -29,3 +29,13 @@ class RegisterForm(forms.ModelForm):
                 address=self.cleaned_data['address']
             ) 
         return user
+
+
+class ReviewForm(forms.ModelForm):
+    class Meta:
+        model = Review
+        fields = ['rating', 'text']
+        widgets = {
+            'rating': forms.RadioSelect(choices=[(i, str(i)) for i in range(1, 6)]),
+            'text': forms.Textarea(attrs={'rows': 4, 'placeholder': 'Your review...'}),
+        }

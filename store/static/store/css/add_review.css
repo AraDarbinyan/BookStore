@@ -1,0 +1,46 @@
+.review-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+.review-form h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.review-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.review-form input[type="radio"] {
+    margin-right: 5px;
+}
+
+.review-form textarea {
+    width: 100%;
+    height: 100px;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+.review-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.review-form button:hover {
+    background-color: #0056b3;
+}

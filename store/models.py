@@ -45,6 +45,13 @@ class Book(models.Model):
     stock = models.PositiveIntegerField()
     categories = models.ManyToManyField(Category, related_name='books')
 
+    @property
+    def average_rating(self):
+        reviews = self.reviews.all()
+        if reviews.exists():
+            return round(sum(r.rating for r in reviews) / reviews.count(), 1)
+        return None
+
     def __str__(self):
         return self.title
    
@@ -87,3 +94,15 @@ class Order(models.Model):
 
     def __str__(self):
         return f"Order #{self.id} for {self.customer.user.username}"
+    
+
+class Review(models.Model):
+    book = models.ForeignKey(Book, on_delete=models.CASCADE, related_name='reviews')
+    customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
+    rating = models.PositiveIntegerField(choices=[(i, str(i)) for i in range(1, 6)], default=5)
+    text = models.TextField(blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f'Review for {self.book.title} by {self.customer.user.username}'
+
