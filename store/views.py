@@ -95,22 +95,40 @@ def remove_from_cart(request, item_id):
     return redirect('cart')
 
 
-@require_POST
 @login_required
 def checkout_view(request):
     customer = request.user.customer
     cart = Cart.objects.filter(customer=customer, is_active=True).first()
 
-    if cart and cart.items.exists():
+    if not cart or not cart.items.exists():
+        return redirect('cart')
+
+    PAYMENT_METHODS = [
+        ('cash', 'Cash on Delivery'),
+        ('card', 'Credit Card'),
+        ('paypal', 'PayPal'),
+        ('crypto', 'Cryptocurrency'),
+    ]
+
+    if request.method == 'POST':
+        payment_method = request.POST.get('payment_method')
+
         order = Order.objects.create(
             customer=customer,
             cart=cart,
-            order_type='paper'  
+            payment_method=payment_method,
+            order_type='paper'
         )
+
         cart.is_active = False
         cart.save()
         return redirect('thank_you')
-    return redirect('cart')
+
+    return render(request, 'store/checkout.html', {
+        'customer': customer,
+        'payment_methods': PAYMENT_METHODS,
+    })
+
 
 
 @login_required

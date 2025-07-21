@@ -84,6 +84,7 @@ class Order(models.Model):
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
     cart = models.OneToOneField(Cart, on_delete=models.CASCADE)
     ordered_at = models.DateTimeField(auto_now_add=True)
+    payment_method = models.CharField(max_length=50, blank=True, null=True)
     TYPE_CHOICES = [
     ('paper', 'Paper'),
     ('digital', 'Digital'),

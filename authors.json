@@ -243,10 +243,10 @@
     "model": "store.author",
     "pk": 25,
     "fields": {
-      "name": "Emily Dickinson",
-      "biography": "American poet.",
-      "date_of_birth": "1830-12-10",
-      "date_of_death": "1886-05-15"
+      "name": "Haruki Murakami",
+      "biography": "Famous modern japanies writer.",
+      "date_of_birth": "1949-01-12",
+      "date_of_death": null
     }
   },
   {
@@ -398,7 +398,46 @@
         "date_of_birth": "1802-02-26",
         "date_of_death": "1885-05-22"
     }
+},
+{
+    "model": "store.author",
+    "pk": 41,
+    "fields": {
+        "name": "John Steinbeck",
+        "biography": "American writer, 1962 Nobel Prize in Literature ",
+        "date_of_birth": "1902-02-27",
+        "date_of_death": "1968-12-20"
+    }
+},
+{
+    "model": "store.author",
+    "pk": 42,
+    "fields": {
+        "name": "Antoine de Saint-Exupéry",
+        "biography": "French writer, poet, journalist and aviator",
+        "date_of_birth": "1900-06-29",
+        "date_of_death": "1944-07-31"
+    }
+},
+{
+    "model": "store.author",
+    "pk": 43,
+    "fields": {
+        "name": "Joseph Conrad",
+        "biography": "Polish-British novelist and story writer",
+        "date_of_birth": "1857-12-03",
+        "date_of_death": "1924-08-01"
+    }
+},
+{
+    "model": "store.author",
+    "pk": 44,
+    "fields": {
+        "name": "Yann Martel",
+        "biography": "Canadian author known by Life of Pi",
+        "date_of_birth": "1963-06-25",
+        "date_of_death": null
+    }
 }
-
 
 ]

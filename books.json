@@ -513,7 +513,7 @@
     "model": "store.book",
     "pk": 35,
     "fields": {
-        "title": "Anna Karenina",
+        "title": "Dubrovsky",
         "description": "Novel by Alexander Pushkin.",
         "isbn": "9780143035008",
         "publisher": "Penguin Classics",
@@ -709,14 +709,14 @@
     "model": "store.book",
     "pk": 48,
     "fields": {
-        "title": "Lord of the Flies",
-        "description": "Allegorical novel by William Golding.",
+        "title": "Around the Moon",
+        "description": "Fantastic novel by Jules Verne.",
         "isbn": "9780399501487",
         "publisher": "Faber and Faber",
-        "year_published": 1954,
+        "year_published": 1870,
         "price": "13.99",
         "stock": 25,
-        "authors": [25],
+        "authors": [23],
         "categories": [1]
     }
 },
@@ -724,11 +724,11 @@
     "model": "store.book",
     "pk": 49,
     "fields": {
-        "title": "Rebecca",
-        "description": "Gothic novel by Daphne du Maurier.",
+        "title": "Moby-Dick",
+        "description": "Legendary novel by Herman Melville.",
         "isbn": "9780380730407",
         "publisher": "Victor Gollancz Ltd",
-        "year_published": 1938,
+        "year_published": 1851,
         "price": "12.99",
         "stock": 20,
         "authors": [20],
@@ -739,14 +739,14 @@
     "model": "store.book",
     "pk": 50,
     "fields": {
-        "title": "Catch-22",
-        "description": "Satirical war novel by Joseph Heller.",
+        "title": "Billy Budd, Sailor",
+        "description": "A young, innocent sailor, Billy Budd, is falsely accused of mutiny aboard a British warship, leading to tragic consequences.",
         "isbn": "9781451626650",
         "publisher": "Simon & Schuster",
-        "year_published": 1961,
+        "year_published": 1924,
         "price": "13.99",
         "stock": 25,
-        "authors": [17],
+        "authors": [20],
         "categories": [1]
     }
 },
@@ -761,7 +761,7 @@
         "year_published": 1899,
         "price": "10.99",
         "stock": 20,
-        "authors": [16],
+        "authors": [43],
         "categories": [1]
     }
 },
@@ -807,7 +807,7 @@
         "year_published": 1937,
         "price": "11.99",
         "stock": 25,
-        "authors": [9],
+        "authors": [41],
         "categories": [1]
     }
 },
@@ -822,7 +822,7 @@
         "year_published": 1952,
         "price": "13.99",
         "stock": 20,
-        "authors": [9],
+        "authors": [41],
         "categories": [1]
     }
 },
@@ -837,7 +837,7 @@
         "year_published": 1945,
         "price": "12.99",
         "stock": 20,
-        "authors": [9],
+        "authors": [41],
         "categories": [1]
     }
 },
@@ -852,7 +852,7 @@
         "year_published": 1939,
         "price": "14.99",
         "stock": 25,
-        "authors": [9],
+        "authors": [41],
         "categories": [1]
     }
 },
@@ -905,11 +905,11 @@
     "model": "store.book",
     "pk": 61,
     "fields": {
-        "title": "No Exit",
-        "description": "Existentialist play by Jean-Paul Sartre.",
+        "title": "Adventures of Huckleberry Finn",
+        "description": "Legendary novel by Mark Twain.",
         "isbn": "9780679725169",
         "publisher": "Gallimard",
-        "year_published": 1944,
+        "year_published": 1876,
         "price": "11.99",
         "stock": 15,
         "authors": [4],
@@ -920,11 +920,11 @@
     "model": "store.book",
     "pk": 62,
     "fields": {
-        "title": "The Second Sex",
-        "description": "Foundational feminist text by Simone de Beauvoir.",
+        "title": "Adventures of Huckleberry Finn ",
+        "description": "Legendary novel by Mark Twain.",
         "isbn": "9780307277787",
         "publisher": "Gallimard",
-        "year_published": 1949,
+        "year_published": 1884,
         "price": "15.99",
         "stock": 15,
         "authors": [4],
@@ -950,11 +950,11 @@
     "model": "store.book",
     "pk": 64,
     "fields": {
-        "title": "The Outsiders",
-        "description": "Young adult novel by S.E. Hinton.",
+        "title": "Song of Solomon",
+        "description": "Novel by Toni Morrison.",
         "isbn": "9780143039853",
         "publisher": "Viking Press",
-        "year_published": 1967,
+        "year_published": 1977,
         "price": "11.99",
         "stock": 20,
         "authors": [22],
@@ -972,7 +972,7 @@
         "year_published": 1943,
         "price": "10.99",
         "stock": 20,
-        "authors": [19],
+        "authors": [42],
         "categories": [7, 8]
     }
 }
@@ -981,11 +981,11 @@
     "model": "store.book",
     "pk": 66,
     "fields": {
-        "title": "Invisible Cities",
-        "description": "Novel by Italo Calvino.",
+        "title": "The Colossus and Other Poems",
+        "description": "Novel by Sylvia Plath.",
         "isbn": "9780156453806",
         "publisher": "Giulio Einaudi Editore",
-        "year_published": 1972,
+        "year_published": 1960,
         "price": "12.99",
         "stock": 15,
         "authors": [28],
@@ -996,11 +996,11 @@
     "model": "store.book",
     "pk": 67,
     "fields": {
-        "title": "If on a winter's night a traveler",
-        "description": "Novel by Italo Calvino.",
+        "title": "Ariel",
+        "description": "Novel by Sylvia Plath.",
         "isbn": "9780156439619",
         "publisher": "Giulio Einaudi Editore",
-        "year_published": 1979,
+        "year_published": 1965,
         "price": "12.99",
         "stock": 15,
         "authors": [28],
@@ -1011,11 +1011,11 @@
     "model": "store.book",
     "pk": 68,
     "fields": {
-        "title": "The Name of the Rose",
-        "description": "Historical mystery novel by Umberto Eco.",
+        "title": "Crossing the Water",
+        "description": "Historical mystery novel by Sylvia Plath.",
         "isbn": "9780156001311",
         "publisher": "Bompiani",
-        "year_published": 1980,
+        "year_published": 1971,
         "price": "14.99",
         "stock": 20,
         "authors": [28],
@@ -1026,11 +1026,11 @@
     "model": "store.book",
     "pk": 69,
     "fields": {
-        "title": "Foucault's Pendulum",
-        "description": "Novel by Umberto Eco.",
+        "title": "Winter Trees",
+        "description": "Novel by Sylvia Plath.",
         "isbn": "9780156032971",
         "publisher": "Bompiani",
-        "year_published": 1988,
+        "year_published": 1971,
         "price": "15.99",
         "stock": 20,
         "authors": [28],
@@ -1041,11 +1041,11 @@
     "model": "store.book",
     "pk": 70,
     "fields": {
-        "title": "The Book Thief",
-        "description": "Novel by Markus Zusak.",
+        "title": "The Bluest Eye",
+        "description": "Novel by Toni Morrison.",
         "isbn": "9780375842208",
         "publisher": "Picador",
-        "year_published": 2005,
+        "year_published": 1970,
         "price": "13.99",
         "stock": 25,
         "authors": [22],
@@ -1063,7 +1063,7 @@
         "year_published": 2001,
         "price": "13.99",
         "stock": 20,
-        "authors": [24],
+        "authors": [44],
         "categories": [1]
     }
 },
@@ -1071,11 +1071,11 @@
     "model": "store.book",
     "pk": 72,
     "fields": {
-        "title": "Memoirs of a Geisha",
-        "description": "Historical novel by Arthur Golden.",
+        "title": "Typee",
+        "description": "the story of a sailor who deserts his ship and lives among the supposedly cannibalistic Typee tribe in the South Pacific.",
         "isbn": "9780679781585",
         "publisher": "Alfred A. Knopf",
-        "year_published": 1997,
+        "year_published": 1846,
         "price": "13.99",
         "stock": 20,
         "authors": [20],
@@ -1093,7 +1093,7 @@
         "year_published": 1987,
         "price": "13.99",
         "stock": 20,
-        "authors": [24],
+        "authors": [25],
         "categories": [1, 6]
     }
 },
@@ -1108,7 +1108,7 @@
         "year_published": 2002,
         "price": "14.99",
         "stock": 20,
-        "authors": [24],
+        "authors": [25],
         "categories": [1, 3]
     }
 },
@@ -1123,7 +1123,7 @@
         "year_published": 2009,
         "price": "18.99",
         "stock": 20,
-        "authors": [24],
+        "authors": [25],
         "categories": [1, 4]
     }
 },
@@ -1138,7 +1138,7 @@
         "year_published": 2014,
         "price": "12.99",
         "stock": 20,
-        "authors": [24],
+        "authors": [25],
         "categories": [1]
     }
 },
@@ -1153,7 +1153,7 @@
         "year_published": 1992,
         "price": "12.99",
         "stock": 20,
-        "authors": [24],
+        "authors": [25],
         "categories": [1, 6]
     }
 },
@@ -1168,7 +1168,7 @@
         "year_published": 1999,
         "price": "12.99",
         "stock": 20,
-        "authors": [24],
+        "authors": [25],
         "categories": [1, 6]
     }
 }

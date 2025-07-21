@@ -19,7 +19,7 @@
 {% if orders %}
     {% for order in orders %}
         <div class="order">
-            <h3>Order #{{ order.id }} — {{ order.created_at|date:"d M Y H:i" }}</h3>
+            <h3>Order #{{ order.id }} — {{ order.ordered_at|date:"d M Y H:i" }}</h3>
             <ul>
                 {% for item in order.cart.items.all %}
                     <li>{{ item.book.title }} — Quantity: {{ item.quantity }} — Price: ${{ item.get_total_price }}</li>

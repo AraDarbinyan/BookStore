@@ -18,4 +18,5 @@ urlpatterns = [
     path('logout/', LogoutView.as_view(next_page='index'), name='logout'),
     path('profile/', views.profile_view, name='profile'),
     path('books/<int:book_id>/add-review/', views.add_review, name='add_review'),
+    path('checkout/', views.checkout_view, name='checkout'),
 ]

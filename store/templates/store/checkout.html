@@ -1,0 +1,25 @@
+{% extends 'store/base.html' %}
+{% load static %}
+
+{% block title %}Checkout{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'store/css/checkout.css' %}">
+{% endblock %}
+
+{% block content %}
+<h2>Checkout</h2>
+<form method="post">
+    {% csrf_token %}
+    <label>Address:</label><br>
+    <textarea name="address" rows="4" cols="50">{{ customer.address }}</textarea><br><br>
+
+    <label>Payment Method:</label><br>
+    {% for value, label in payment_methods %}
+        <input type="radio" name="payment_method" value="{{ value }}" required> {{ label }}<br>
+    {% endfor %}
+
+    <button type="submit" class="checkout-btn">Confirm Order</button>
+</form>
+
+{% endblock %}

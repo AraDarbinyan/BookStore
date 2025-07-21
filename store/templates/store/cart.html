@@ -36,10 +36,12 @@
         Total: ${{ total_price }}
     </div>
 
-    <form method="post" action="{% url 'checkout' %}">
+    <!-- <form method="post" action="{% url 'checkout' %}">
         {% csrf_token %}
         <button type="submit">Checkout</button>
-    </form>
+    </form> -->
+    <a href="{% url 'checkout' %}" class="checkout-link">Proceed to Checkout</a>
+
 
 </div>
 
