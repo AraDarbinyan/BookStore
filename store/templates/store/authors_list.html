@@ -1,0 +1,24 @@
+{% extends 'store/base.html' %}
+{% load static %}
+
+{% block title %}Authors list{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'store/css/authors_list.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="authors-container">
+    <h2>Authors</h2>
+    <div class="authors-grid">
+        {% for author in authors %}
+            <div class="author-card">
+                <a href="{% url 'author_detail' author.id %}">
+                    {{ author.name }}
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
