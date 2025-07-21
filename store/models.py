@@ -107,3 +107,12 @@ class Review(models.Model):
     def __str__(self):
         return f'Review for {self.book.title} by {self.customer.user.username}'
 
+
+class BookPhoto(models.Model):
+    book = models.ForeignKey(Book, on_delete=models.CASCADE, related_name='photos')
+    image = models.ImageField(upload_to='images/books/')
+    alt_text = models.CharField(max_length=255, blank=True)
+
+    def __str__(self):
+        return f"Photo for {self.book.title}"
+

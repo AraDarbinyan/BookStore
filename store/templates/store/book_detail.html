@@ -10,10 +10,21 @@
 
 {% block content %}
 <div class="book-detail">
-  <h2>{{ book.title }}</h2>
-  {% if book.average_rating %}
-      <p>Average Rating: {{ book.average_rating }} / 5</p>
-  {% endif %}
+    <h2>{{ book.title }}</h2>
+    {% if book.average_rating %}
+        <p>Average Rating: {{ book.average_rating }} / 5</p>
+    {% endif %}
+    <div class="book-gallery">
+        <div class="main-photo">
+            <img id="main-book-photo" src="{{ photos.0.image.url }}" alt="Book image">
+        </div>
+        <div class="thumbnail-gallery">
+            {% for photo in photos %}
+                <img src="{{ photo.image.url }}" class="thumbnail" onclick="changeMainPhoto(this)">
+            {% endfor %}
+        </div>
+    </div>
+
   <p><strong>Author(s):</strong>
     {% for author in book.authors.all %}
       {{ author.name }}{% if not forloop.last %}, {% endif %}

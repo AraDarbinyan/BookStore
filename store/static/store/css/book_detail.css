@@ -1,5 +1,5 @@
 .book-detail {
-  max-width: 800px;
+  max-width: 900px;
   margin: 30px auto;
   padding: 20px;
   border: 1px solid #ddd;
@@ -27,3 +27,34 @@
 .btn-back:hover {
   background-color: #0056b3;
 }
+
+.book-gallery {
+    text-align: center;
+}
+
+.main-photo img {
+    width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.thumbnail-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.thumbnail-gallery .thumbnail {
+    width: 80px;
+    height: auto;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.thumbnail-gallery .thumbnail:hover {
+    border: 2px solid #007BFF;
+}
+

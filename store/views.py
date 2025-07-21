@@ -48,7 +48,8 @@ def all_books_view(request):
 
 def book_detail_view(request, pk):
     book = get_object_or_404(Book, pk=pk)
-    return render(request, 'store/book_detail.html', {'book': book})
+    photos = book.photos.all()
+    return render(request, 'store/book_detail.html', {'book': book, 'photos': photos})
 
 
 @login_required
