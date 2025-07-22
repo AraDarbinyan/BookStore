@@ -21,6 +21,8 @@
             <img src="{{ book.image.url }}" alt="{{ book.title }}">
         {% endif %}
         <h3>{{ book.title }}</h3>
+        <p>Rating: {{ book.avg_rating|default:"N/A" }}</p>
+
         <p>Author:
             {% for author in book.authors.all %}
             {{ author.name }}{% if not forloop.last %}, {% endif %}
@@ -51,8 +53,24 @@
     {% endfor %}
 </div>
 
-<div>
-    <h2>Popular</h2>
+<h2>Popular Books</h2>
+<div class="books-grid">
+    {% for book in popular_books %}
+        <div class="book-card">
+            <h3>{{ book.title }}</h3>
+            <p>Author:
+                {% for author in book.authors.all %}
+                    {{ author.name }}{% if not forloop.last %}, {% endif %}
+                {% endfor %}
+            </p>
+            <p>Price: ${{ book.price }}</p>
+            <p>Rating: {{ book.average_rating|default:"N/A" }}</p>
+            <p>Sales: {{ book.sales_count }}</p>
+            <a href="{% url 'book_detail' book.id %}">View Details</a>
+        </div>
+    {% empty %}
+        <p>No popular books yet.</p>
+    {% endfor %}
 </div>
 
 <div>

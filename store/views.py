@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .forms import RegisterForm, ReviewForm
-from django.db.models import Q
+from django.db.models import Q, Count, Avg
 from .models import Book, Cart, CartItem, Order, Category, Customer, Review, Author
 from django.contrib import messages
 from django.contrib.auth import login
@@ -13,10 +13,15 @@ def index(request):
     books = Book.objects.all()[:14]
     categories = Category.objects.all()
     new_books = Book.objects.all().order_by('-id')[:7]
+    popular_books = Book.objects.annotate(
+        sales_count=Count('cartitem'),
+        avg_rating=Avg('reviews__rating')
+    ).filter(sales_count__gte=5).order_by('-avg_rating')[:6]
     return render(request, 'store/index.html', {
         'books': books, 
         'categories': categories,
-        'new_books': new_books
+        'new_books': new_books,
+        'popular_books': popular_books
         })
 
 

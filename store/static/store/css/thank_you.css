@@ -1,0 +1,32 @@
+.thank-you-container {
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 40px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.thank-you-container h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.thank-you-container p {
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.thank-you-container a {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.thank-you-container a:hover {
+    background-color: #0056b3;
+}
