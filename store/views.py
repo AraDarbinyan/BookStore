@@ -49,7 +49,8 @@ def all_books_view(request):
 def book_detail_view(request, pk):
     book = get_object_or_404(Book, pk=pk)
     photos = book.photos.all()
-    return render(request, 'store/book_detail.html', {'book': book, 'photos': photos})
+    categories = Category.objects.all()
+    return render(request, 'store/book_detail.html', {'book': book, 'photos': photos, 'categories': categories,})
 
 
 @login_required
@@ -58,6 +59,7 @@ def cart_view(request):
         customer = request.user.customer
     except Customer.DoesNotExist:
         customer = Customer.objects.create(user=request.user)
+    categories = Category.objects.all()
     cart = Cart.objects.filter(customer=customer, is_active=True).first()
 
     if cart:
@@ -70,7 +72,8 @@ def cart_view(request):
     return render(request, 'store/cart.html', {
         'cart': cart,
         'items': items,
-        'total_price': total_price
+        'total_price': total_price,
+        'categories': categories
     })
 
 
@@ -99,6 +102,7 @@ def remove_from_cart(request, item_id):
 @login_required
 def checkout_view(request):
     customer = request.user.customer
+    categories = Category.objects.all()
     cart = Cart.objects.filter(customer=customer, is_active=True).first()
 
     if not cart or not cart.items.exists():
@@ -128,6 +132,7 @@ def checkout_view(request):
     return render(request, 'store/checkout.html', {
         'customer': customer,
         'payment_methods': PAYMENT_METHODS,
+        'categories': categories
     })
 
 
@@ -139,11 +144,13 @@ def thank_you_view(request):
 
 
 def about(request):
-    return render(request, 'store/about.html')
+    categories = Category.objects.all()
+    return render(request, 'store/about.html', {'categories': categories})
 
 
 def contact(request):
-    return render(request, 'store/contact.html')
+    categories = Category.objects.all()
+    return render(request, 'store/contact.html', {'categories': categories})
 
 
 def register_view(request):
@@ -155,9 +162,11 @@ def register_view(request):
             return redirect('login')
     else:
         form = RegisterForm()
+        categories = Category.objects.all()
     return render(request, 'store/register.html', {
         'register_form': form,
-        'login_form': AuthenticationForm()
+        'login_form': AuthenticationForm(),
+        'categories': categories
     })
 
 def login_view(request):
@@ -169,9 +178,11 @@ def login_view(request):
             return redirect('profile')
     else:
         form = AuthenticationForm()
+        categories = Category.objects.all()
     return render(request, 'store/login.html', {
         'login_form': form,
-        'register_form': RegisterForm()
+        'register_form': RegisterForm(),
+        'categories': categories
     })
 
 
@@ -181,8 +192,9 @@ def profile_view(request):
         customer = request.user.customer
     except Customer.DoesNotExist:
         customer = Customer.objects.create(user=request.user)
+    categories = Category.objects.all()
     orders = Order.objects.filter(customer=customer).order_by('-ordered_at').prefetch_related('cart__items__book')
-    return render(request, 'store/profile.html', {'customer': customer, 'orders': orders})
+    return render(request, 'store/profile.html', {'customer': customer, 'orders': orders, 'categories': categories})
 
 
 @login_required
@@ -210,10 +222,12 @@ def add_review(request, book_id):
 
 def authors_list(request):
     authors = Author.objects.all()
-    return render(request, 'store/authors_list.html', {'authors': authors})
+    categories = Category.objects.all()
+    return render(request, 'store/authors_list.html', {'authors': authors, 'categories': categories})
 
 
 def author_detail(request, author_id):
     author = get_object_or_404(Author, id=author_id)
     books = author.books.all()
-    return render(request, 'store/author_detail.html', {'author': author, 'books': books})
+    categories = Category.objects.all()
+    return render(request, 'store/author_detail.html', {'author': author, 'books': books, 'categories': categories})

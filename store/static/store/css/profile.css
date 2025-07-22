@@ -30,7 +30,7 @@ form {
   margin-top: 2rem;
 }
 
-button[type="submit"] {
+.logout button[type="submit"] {
   padding: 10px 20px;
   font-size: 1rem;
   background-color: #dc3545;
@@ -41,6 +41,6 @@ button[type="submit"] {
   transition: background-color 0.3s ease;
 }
 
-button[type="submit"]:hover {
+.logout button[type="submit"]:hover {
   background-color: #bd2130;
 }

@@ -1,4 +1,11 @@
 {% extends "store/base.html" %}
+{% load static %}
+
+{% block title %}Profile{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'store/css/profile.css' %}">
+{% endblock %}
 
 {% block content %}
   <div class="profile-container">
@@ -8,10 +15,12 @@
     <p><strong>Address:</strong> {{ customer.address }}</p>
   </div>
 
-  <form method="post" action="{% url 'logout' %}">
-    {% csrf_token %}
-    <button type="submit">Logout</button>
-  </form>
+  <div class="logout">
+    <form method="post" action="{% url 'logout' %}">
+      {% csrf_token %}
+      <button type="submit">Logout</button>
+    </form>
+  </div>
 
 
 <h2>Your Orders</h2>
