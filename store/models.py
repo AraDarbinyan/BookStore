@@ -72,6 +72,12 @@ class CartItem(models.Model):
     cart = models.ForeignKey(Cart, on_delete=models.CASCADE, related_name='items')
     book = models.ForeignKey(Book, on_delete=models.CASCADE)
     quantity = models.PositiveIntegerField(default=1)
+    ITEM_TYPES = [
+        ('paper', 'Paper'),
+        ('ebook', 'E-book'),
+        ('audio', 'Audio'),
+    ]
+    item_type = models.CharField(max_length=10, choices=ITEM_TYPES, default='paper')
 
     def __str__(self):
         return f"{self.quantity} x {self.book.title}"
@@ -85,13 +91,7 @@ class Order(models.Model):
     cart = models.OneToOneField(Cart, on_delete=models.CASCADE)
     ordered_at = models.DateTimeField(auto_now_add=True)
     payment_method = models.CharField(max_length=50, blank=True, null=True)
-    TYPE_CHOICES = [
-    ('paper', 'Paper'),
-    ('digital', 'Digital'),
-    ('audio', 'Audio'),
-]
-
-    order_type = models.CharField(max_length=20, choices=TYPE_CHOICES)
+    
 
     def __str__(self):
         return f"Order #{self.id} for {self.customer.user.username}"

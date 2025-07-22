@@ -83,8 +83,15 @@ def add_to_cart(request, book_id):
     customer = request.user.customer
     cart, created = Cart.objects.get_or_create(customer=customer, is_active=True)
     book = get_object_or_404(Book, id=book_id)
-    cart_item, created = CartItem.objects.get_or_create(cart=cart, book=book)
 
+    item_type = request.POST.get('item_type', 'paper') 
+
+    cart_item, created = CartItem.objects.get_or_create(
+        cart=cart,
+        book=book,
+        item_type=item_type,
+        defaults={'quantity': 1}
+    )
     if not created:
         cart_item.quantity += 1
         cart_item.save()
@@ -121,8 +128,7 @@ def checkout_view(request):
         order = Order.objects.create(
             customer=customer,
             cart=cart,
-            payment_method=payment_method,
-            order_type='paper'
+            payment_method=payment_method
         )
 
         cart.is_active = False

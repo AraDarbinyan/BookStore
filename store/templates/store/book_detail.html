@@ -35,10 +35,17 @@
   <p><strong>Year:</strong> {{ book.year_published }}</p>
   <p><strong>Price:</strong> ${{ book.price }}</p>
   <p><strong>Description:</strong> {{ book.description }}</p>
-  <form method="post" action="{% url 'add_to_cart' book.id %}">
-    {% csrf_token %}
-    <button type="submit" class="add-to-cart-btn">Add to cart</button>
+  <form method="post" action="{% url 'add_to_cart' book.id %}" class="add-to-cart-form">
+      {% csrf_token %}
+      <label for="item_type">Choose type:</label>
+      <select name="item_type" id="item_type">
+          <option value="paper">Paper</option>
+          <option value="ebook">E-book</option>
+          <option value="audio">Audio</option>
+      </select>
+      <button type="submit" class="add-to-cart-btn">Add to cart</button>
   </form>
+
   
   <div class="reviews-list">
     <h3>Reviews:</h3>
