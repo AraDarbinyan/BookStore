@@ -244,3 +244,9 @@ def author_detail(request, author_id):
     books = author.books.all()
     categories = Category.objects.all()
     return render(request, 'store/author_detail.html', {'author': author, 'books': books, 'categories': categories})
+
+
+def sale_view(request):
+    categories = Category.objects.all()
+    books_on_sale = Book.objects.filter(is_on_sale=True).all()
+    return render(request, 'store/sale.html', {'categories': categories, 'books_on_sale': books_on_sale})
