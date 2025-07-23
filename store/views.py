@@ -17,11 +17,13 @@ def index(request):
         sales_count=Count('cartitem'),
         avg_rating=Avg('reviews__rating')
     ).filter(sales_count__gte=5).order_by('-avg_rating')[:6]
+    books_on_sale = Book.objects.filter(is_on_sale=True)[:6]
     return render(request, 'store/index.html', {
         'books': books, 
         'categories': categories,
         'new_books': new_books,
-        'popular_books': popular_books
+        'popular_books': popular_books,
+        'books_on_sale': books_on_sale,
         })
 
 

@@ -44,6 +44,8 @@ class Book(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)
     stock = models.PositiveIntegerField()
     categories = models.ManyToManyField(Category, related_name='books')
+    is_on_sale = models.BooleanField(default=False)
+    discount_price = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
 
     @property
     def average_rating(self):

@@ -82,3 +82,15 @@
 .review-text {
     margin: 0;
 }
+
+del {
+    color: gray;
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+
+strong {
+    color: red;
+    font-weight: bold;
+}
+

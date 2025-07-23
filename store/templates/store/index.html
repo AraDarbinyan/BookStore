@@ -21,13 +21,18 @@
             <img src="{{ book.image.url }}" alt="{{ book.title }}">
         {% endif %}
         <h3>{{ book.title }}</h3>
-        <p>Rating: {{ book.avg_rating|default:"N/A" }}</p>
+        <p>Rating: {{ book.average_rating|default:"N/A" }}</p>
 
         <p>Author:
             {% for author in book.authors.all %}
             {{ author.name }}{% if not forloop.last %}, {% endif %}
             {% endfor %}</p>
-        <p>Price: ${{ book.price }}</p>
+        {% if book.is_on_sale and book.discount_price %}
+            <p>Price: <del>${{ book.price }}</del> <strong>${{ book.discount_price }}</strong></p>
+        {% else %}
+            <p>Price: ${{ book.price }}</p>
+        {% endif %}
+
         <a href="{%url 'book_detail' book.id %}">View Details</a>
     </div>
     {% endfor %}
@@ -47,14 +52,19 @@
                     {{ author.name }}{% if not forloop.last %}, {% endif %}
                 {% endfor %}
             </p>
-            <p>Price: ${{ book.price }}</p>
+            {% if book.is_on_sale and book.discount_price %}
+                <p>Price: <del>${{ book.price }}</del> <strong>${{ book.discount_price }}</strong></p>
+            {% else %}
+                <p>Price: ${{ book.price }}</p>
+            {% endif %}
+
             <a href="{% url 'book_detail' book.id %}">View Details</a>
         </div>
     {% endfor %}
 </div>
 
 <h2>Popular Books</h2>
-<div class="books-grid">
+<div class="book-grid">
     {% for book in popular_books %}
         <div class="book-card">
             <h3>{{ book.title }}</h3>
@@ -73,7 +83,19 @@
     {% endfor %}
 </div>
 
-<div>
-    <h2>Sales</h2>
+<h2>Sale</h2>
+<div class="book-grid">
+    {% for book in books_on_sale %}
+    <div class="book-card">
+        <h3>{{ book.title }}</h3>
+        <p>Author:
+            {% for author in book.authors.all %}
+                {{ author.name }}{% if not forloop.last %}, {% endif %}
+            {% endfor %}
+        </p>
+        <p>Price: <del>${{ book.price }}</del> <strong>${{ book.discount_price }}</strong></p>
+        <a href="{% url 'book_detail' book.id %}">View Details</a>
+    </div>
+    {% endfor %}
 </div>
 {% endblock %}

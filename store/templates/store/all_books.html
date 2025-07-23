@@ -21,7 +21,12 @@
           {{ author.name }}{% if not forloop.last %}, {% endif %}
         {% endfor %}
       </p>
-      <p>Price: ${{ book.price }}</p>
+      {% if book.is_on_sale and book.discount_price %}
+          <p>Price: <del>${{ book.price }}</del> <strong>${{ book.discount_price }}</strong></p>
+      {% else %}
+          <p>Price: ${{ book.price }}</p>
+      {% endif %}
+
       <a href="{%url 'book_detail' book.id %}">View Details</a>
     </div>
   {% endfor %}
