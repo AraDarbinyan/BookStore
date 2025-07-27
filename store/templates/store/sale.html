@@ -14,6 +14,11 @@
 <div class="book-grid">
     {% for book in books_on_sale %}
         <div class="book-card">
+            {% if book.photos.first %}
+                <img src="{{ book.photos.first.image.url }}" alt="{{ book.title }} cover" class="book-cover">
+            {% else %}
+                <img src="{% static 'store/images/No_image_available.png' %}" alt="No image" class="book-cover">
+            {% endif %}
             <h3>{{ book.title }}</h3>
             <p>Author:
                 {% for author in book.authors.all %}

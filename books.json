@@ -905,7 +905,7 @@
     "model": "store.book",
     "pk": 61,
     "fields": {
-        "title": "Adventures of Huckleberry Finn",
+        "title": "Adventures of Tom Sawyer",
         "description": "Legendary novel by Mark Twain.",
         "isbn": "9780679725169",
         "publisher": "Gallimard",

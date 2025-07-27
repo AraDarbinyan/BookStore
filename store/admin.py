@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Customer, Book, Author, Category, Cart, CartItem, Order, Review
+from .models import Customer, Book, Author, Category, Cart, CartItem, Order, Review, BookPhoto
 
 # Register your models here.
 @admin.register(Author)
@@ -36,3 +36,7 @@ class OrderAdmin(admin.ModelAdmin):
 @admin.register(Review)
 class ReviewAdmin(admin.ModelAdmin):
     list_display = ('customer','book' ,'rating', 'text')
+
+@admin.register(BookPhoto)
+class RegisterBookPhoto(admin.ModelAdmin):
+    list_display = ('book', 'image', 'alt_text')
