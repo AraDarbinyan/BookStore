@@ -20,6 +20,11 @@
         {% for book in books %}
             <div class="book-card">
                 <a href="{% url 'book_detail' book.id %}">
+                    {% if book.photos.first %}
+                        <img src="{{ book.photos.first.image.url }}" alt="{{ book.title }} cover" class="book-cover">
+                    {% else %}
+                        <img src="{% static 'store/images/No_image_available.png' %}" alt="No image" class="book-cover">
+                    {% endif %}
                     {{ book.title }}
                 </a>
             </div>
