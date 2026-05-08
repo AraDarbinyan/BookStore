@@ -1,0 +1,114 @@
+/* Общий блок страницы */
+.checkout-page {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+/* Карточка checkout */
+.checkout-box {
+    background-color: #ffffff;
+    padding: 35px 30px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e9ecef;
+}
+
+/* Заголовок */
+.checkout-box h2 {
+    font-size: 36px;
+    margin-bottom: 25px;
+    color: #222;
+}
+
+/* Группы полей */
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Поле адреса */
+.checkout-box textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 14px 16px;
+    font-size: 16px;
+    border: 1px solid #ced4da;
+    border-radius: 10px;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    box-sizing: border-box;
+}
+
+.checkout-box textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+}
+
+/* Блок способов оплаты */
+.payment-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 14px;
+    background-color: #f8f9fa;
+    border: 1px solid #e3e6ea;
+    border-radius: 10px;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.payment-option:hover {
+    background-color: #eef5ff;
+    border-color: #bcdcff;
+}
+
+.payment-option input[type="radio"] {
+    transform: scale(1.15);
+    cursor: pointer;
+}
+
+.payment-option label {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Кнопка */
+.checkout-btn {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.checkout-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.checkout-btn:active {
+    transform: translateY(0);
+}

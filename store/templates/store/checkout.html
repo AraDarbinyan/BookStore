@@ -8,18 +8,33 @@
 {% endblock %}
 
 {% block content %}
-<h2>Checkout</h2>
-<form method="post">
-    {% csrf_token %}
-    <label>Address:</label><br>
-    <textarea name="address" rows="4" cols="50">{{ customer.address }}</textarea><br><br>
+<div class="checkout-page">
+    <div class="checkout-box">
+        <h2>Checkout</h2>
 
-    <label>Payment Method:</label><br>
-    {% for value, label in payment_methods %}
-        <input type="radio" name="payment_method" value="{{ value }}" required> {{ label }}<br>
-    {% endfor %}
+        <form method="post">
+            {% csrf_token %}
 
-    <button type="submit" class="checkout-btn">Confirm Order</button>
-</form>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea name="address" id="address" rows="4">{{ customer.address }}</textarea>
+            </div>
 
+            <div class="form-group">
+                <label>Payment Method:</label>
+
+                <div class="payment-options">
+                    {% for value, label in payment_methods %}
+                        <div class="payment-option">
+                            <input type="radio" id="payment_{{ forloop.counter }}" name="payment_method" value="{{ value }}" required>
+                            <label for="payment_{{ forloop.counter }}">{{ label }}</label>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <button type="submit" class="checkout-btn">Confirm Order</button>
+        </form>
+    </div>
+</div>
 {% endblock %}
