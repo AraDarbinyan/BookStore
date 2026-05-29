@@ -30,10 +30,11 @@ def index(request):
 
 
 def all_books_view(request):
-    search_query = request.GET.get('q', '')
+    search_query = request.GET.get('q', '').strip()
     category_id = request.GET.get('category')
 
     books = Book.objects.all()
+    categories = Category.objects.all()
 
     if search_query:
         books = books.filter(
@@ -41,17 +42,15 @@ def all_books_view(request):
             Q(description__icontains=search_query)
         )
 
-    if category_id:
+    elif category_id:
         books = Book.objects.filter(categories__id=category_id)
 
-
-    categories = Category.objects.all()
 
     return render(request, 'store/all_books.html', {
         'books': books,
         'categories': categories,
         'search_query': search_query,
-        'selected_category': int(category_id) if category_id else None,
+        'selected_category': int(category_id) if category_id and not search_query else None,
     })
 
 
