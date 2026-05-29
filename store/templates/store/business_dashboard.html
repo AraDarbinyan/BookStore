@@ -1,0 +1,59 @@
+{% extends 'store/base.html' %}
+{% load static %}
+
+{% block title %}Business Dashboard{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'store/css/business_dashboard.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="dashboard">
+    <h2>Business Dashboard</h2>
+    <div class="stats">
+        <div class="stat-item">
+            <h3>Total Sales</h3>
+            <p>${{ revenue|floatformat:2 }}</p>
+        </div>
+        <div class="stat-item">
+            <h3>Total Orders</h3>
+            <p>{{ total_orders }}</p>
+        </div>
+        <div class="stat-item">
+            <h3>Total Customers</h3>
+            <p>{{ total_customers }}</p>
+        </div>
+    </div>
+
+    <div class="charts-grid">
+        <div class="chart-card">
+            <h2>Sales by format</h2>
+            <div class="chart-container pie-chart">
+                <canvas id="formatChart"></canvas>
+            </div>
+        </div>
+
+        <div class="chart-card">
+            <h2>Top books</h2>
+            <div class="chart-container">
+                <canvas id="topBooksChart"></canvas>
+            </div>
+        </div>
+    </div>   
+</div>
+<!--
+Django template syntax inside JavaScript.
+VS Code may underline this in red because it does not understand Django templates,
+but this is completely normal and will work correctly after Django renders the page.
+-->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    const formatLabels = {{ format_labels|safe }};
+    const formatData = {{ format_data|safe }};
+
+    const topBooksLabels = {{ top_books_labels|safe }};
+    const topBooksData = {{ top_books_data|safe }};
+</script>
+
+{% endblock %}

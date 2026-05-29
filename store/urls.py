@@ -22,4 +22,5 @@ urlpatterns = [
     path('authors/', views.authors_list, name='authors_list'),
     path('authors/<int:author_id>/', views.author_detail, name='author_detail'),
     path('sale/', views.sale_view, name='sale'),
+    path('business-dashboard/', views.business_dashboard, name='business_dashboard'),
 ]

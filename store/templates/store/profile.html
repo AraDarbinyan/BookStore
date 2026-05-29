@@ -15,6 +15,16 @@
     <p><strong>Address:</strong> {{ customer.address }}</p>
   </div>
 
+  {% if is_superuser %}
+
+  <div class="superuser-section">
+     <h2>Superuser Options</h2>
+     
+      <a href="{% url 'admin:index' %}" class="admin-link"><button>Admin Panel</button></a>
+      <a href="{% url 'business_dashboard' %}" class="dashboard-link"><button>Go to Business Dashboard</button></a>
+  </div>
+  {% endif %}
+
   <div class="logout">
     <form method="post" action="{% url 'logout' %}">
       {% csrf_token %}

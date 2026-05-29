@@ -1,12 +1,14 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .forms import RegisterForm, ReviewForm
-from django.db.models import Q, Count, Avg
+from django.db.models import Q, Count, Avg, Sum, F
 from .models import Book, Cart, CartItem, Order, Category, Customer, Review, Author
 from django.contrib import messages
 from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import AuthenticationForm
 from django.views.decorators.http import require_POST
+from django.contrib.admin.views.decorators import staff_member_required
+import json
 
 # Create your views here.
 def index(request):
@@ -175,7 +177,8 @@ def register_view(request):
             return redirect('login')
     else:
         form = RegisterForm()
-        categories = Category.objects.all()
+        
+    categories = Category.objects.all()
     return render(request, 'store/register.html', {
         'register_form': form,
         'login_form': AuthenticationForm(),
@@ -191,7 +194,7 @@ def login_view(request):
             return redirect('profile')
     else:
         form = AuthenticationForm()
-        categories = Category.objects.all()
+    categories = Category.objects.all()
     return render(request, 'store/login.html', {
         'login_form': form,
         'register_form': RegisterForm(),
@@ -206,8 +209,9 @@ def profile_view(request):
     except Customer.DoesNotExist:
         customer = Customer.objects.create(user=request.user)
     categories = Category.objects.all()
+    is_superuser = request.user.is_superuser
     orders = Order.objects.filter(customer=customer).order_by('-ordered_at').prefetch_related('cart__items__book')
-    return render(request, 'store/profile.html', {'customer': customer, 'orders': orders, 'categories': categories})
+    return render(request, 'store/profile.html', {'customer': customer, 'orders': orders, 'categories': categories, 'is_superuser': is_superuser})
 
 
 @login_required
@@ -250,3 +254,53 @@ def sale_view(request):
     categories = Category.objects.all()
     books_on_sale = Book.objects.filter(is_on_sale=True).all()
     return render(request, 'store/sale.html', {'categories': categories, 'books_on_sale': books_on_sale})
+
+@staff_member_required
+def business_dashboard(request):
+    completed_cart_ids = Order.objects.values_list("cart_id", flat=True)
+
+    total_orders = Order.objects.count()
+
+    total_books_sold = CartItem.objects.filter(
+        cart_id__in=completed_cart_ids
+    ).aggregate(total=Sum("quantity"))["total"] or 0
+
+    revenue = CartItem.objects.filter(
+        cart_id__in=completed_cart_ids
+    ).aggregate(
+        total=Sum(F("quantity") * F("book__price"))
+    )["total"] or 0
+
+    sales_by_format = (
+        CartItem.objects
+        .filter(cart_id__in=completed_cart_ids)
+        .values("item_type")
+        .annotate(total=Sum("quantity"))
+    )
+
+    top_books = (
+        CartItem.objects
+        .filter(cart_id__in=completed_cart_ids)
+        .values("book__title")
+        .annotate(total_sold=Sum("quantity"))
+        .order_by("-total_sold")[:10]
+    )
+    total_customers = Customer.objects.count()
+    format_labels = [item["item_type"] for item in sales_by_format]
+    format_data = [item["total"] for item in sales_by_format]
+
+    top_books_labels = [book["book__title"] for book in top_books]
+    top_books_data = [book["total_sold"] for book in top_books]
+
+    return render(request, "store/business_dashboard.html", {
+        "total_orders": total_orders,
+        "total_books_sold": total_books_sold,
+        "revenue": revenue,
+        "sales_by_format": sales_by_format,
+        "top_books": top_books,
+        "total_customers": total_customers,
+        "format_labels": json.dumps(format_labels),
+        "format_data": json.dumps(format_data),
+        "top_books_labels": json.dumps(top_books_labels),
+        "top_books_data": json.dumps(top_books_data),
+    })
