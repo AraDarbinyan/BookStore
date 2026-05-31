@@ -34,9 +34,22 @@
         </div>
 
         <div class="chart-card">
+            <h2>Payment Methods</h2>
+            <div class="chart-container pie-chart">
+                <canvas id="paymentMethodsChart"></canvas>
+            </div>
+        </div>
+
+        <div class="chart-card">
             <h2>Top books</h2>
             <div class="chart-container">
                 <canvas id="topBooksChart"></canvas>
+            </div>
+        </div>
+        <div class="chart-card">
+            <h2>Last Week's Top Books</h2>
+            <div class="chart-container">
+                <canvas id="lastWeekTopBooksChart"></canvas>
             </div>
         </div>
     </div>   
@@ -54,6 +67,12 @@ but this is completely normal and will work correctly after Django renders the p
 
     const topBooksLabels = {{ top_books_labels|safe }};
     const topBooksData = {{ top_books_data|safe }};
+
+    const lastWeekTopBooksLabels = {{ last_week_top_books_labels|safe }};
+    const lastWeekTopBooksData = {{ last_week_top_books_data|safe }};
+
+    const paymentMethodLabels = {{ payment_method_labels|safe }};
+    const paymentMethodData = {{ payment_method_data|safe }};
 </script>
 
 {% endblock %}

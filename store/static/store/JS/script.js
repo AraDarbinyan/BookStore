@@ -58,3 +58,36 @@ if (topBooksChart) {
         }
     });
 }
+
+const paymentMethodsChart = document.getElementById('paymentMethodsChart');
+
+if (paymentMethodsChart) {
+    new Chart(paymentMethodsChart, {
+        type: 'doughnut',
+        data: {
+            labels: paymentMethodLabels,
+            datasets: [{
+                data: paymentMethodData
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false
+        }
+    });
+}
+
+const lastWeekTopBooksChart = document.getElementById('lastWeekTopBooksChart');
+
+if (lastWeekTopBooksChart) {
+    new Chart(lastWeekTopBooksChart, {
+        type: 'bar',
+        data: {
+            labels: lastWeekTopBooksLabels,
+            datasets: [{
+                label: 'Sold copies',
+                data: lastWeekTopBooksData
+            }]
+        }
+    });
+}

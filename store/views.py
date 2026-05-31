@@ -1,3 +1,4 @@
+
 from django.shortcuts import render, redirect, get_object_or_404
 from .forms import RegisterForm, ReviewForm
 from django.db.models import Q, Count, Avg, Sum, F
@@ -8,7 +9,10 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import AuthenticationForm
 from django.views.decorators.http import require_POST
 from django.contrib.admin.views.decorators import staff_member_required
+from django.utils import timezone
+
 import json
+from datetime import timedelta
 
 # Create your views here.
 def index(request):
@@ -132,6 +136,10 @@ def checkout_view(request):
 
     if request.method == 'POST':
         payment_method = request.POST.get('payment_method')
+
+        if payment_method not in dict(PAYMENT_METHODS):
+            messages.error(request, 'Invalid payment method selected.')
+            return redirect('checkout')
 
         order = Order.objects.create(
             customer=customer,
@@ -284,12 +292,38 @@ def business_dashboard(request):
         .annotate(total_sold=Sum("quantity"))
         .order_by("-total_sold")[:10]
     )
+
+    recent_cart_ids = Order.objects.filter(
+        ordered_at__gte=timezone.now() - timedelta(days=7)
+    ).values_list("cart_id", flat=True)
+
+    last_week_top_books = (
+    CartItem.objects
+    .filter(cart_id__in=recent_cart_ids)
+    .values("book__title")
+    .annotate(total_sold=Sum("quantity"))
+    .order_by("-total_sold")[:10]
+    )
+
+    payment_methods = (
+        Order.objects
+        .values("payment_method")
+        .annotate(total=Count("id"))
+        .order_by("-total")
+    )
+
     total_customers = Customer.objects.count()
     format_labels = [item["item_type"] for item in sales_by_format]
     format_data = [item["total"] for item in sales_by_format]
 
     top_books_labels = [book["book__title"] for book in top_books]
     top_books_data = [book["total_sold"] for book in top_books]
+
+    last_week_top_books_labels = [book["book__title"] for book in last_week_top_books]
+    last_week_top_books_data = [book["total_sold"] for book in last_week_top_books]
+
+    payment_method_labels = [item["payment_method"] or "Unknown" for item in payment_methods]
+    payment_method_data = [item["total"] for item in payment_methods]
 
     return render(request, "store/business_dashboard.html", {
         "total_orders": total_orders,
@@ -302,4 +336,8 @@ def business_dashboard(request):
         "format_data": json.dumps(format_data),
         "top_books_labels": json.dumps(top_books_labels),
         "top_books_data": json.dumps(top_books_data),
+        "last_week_top_books_labels": json.dumps(last_week_top_books_labels),
+        "last_week_top_books_data": json.dumps(last_week_top_books_data),
+        "payment_method_labels": json.dumps(payment_method_labels),
+        "payment_method_data": json.dumps(payment_method_data),
     })
