@@ -1,4 +1,6 @@
 
+from urllib import request
+
 from django.shortcuts import render, redirect, get_object_or_404
 from .forms import RegisterForm, ReviewForm
 from django.db.models import Q, Count, Avg, Sum, F
@@ -264,6 +266,7 @@ def sale_view(request):
 
 @staff_member_required
 def business_dashboard(request):
+    categories = Category.objects.all()
     completed_cart_ids = Order.objects.values_list("cart_id", flat=True)
 
     total_orders = Order.objects.count()
@@ -293,17 +296,34 @@ def business_dashboard(request):
         .order_by("-total_sold")[:10]
     )
 
-    recent_cart_ids = Order.objects.filter(
-        ordered_at__gte=timezone.now() - timedelta(days=7)
-    ).values_list("cart_id", flat=True)
 
-    last_week_top_books = (
-    CartItem.objects
-    .filter(cart_id__in=recent_cart_ids)
-    .values("book__title")
-    .annotate(total_sold=Sum("quantity"))
-    .order_by("-total_sold")[:10]
-    )
+    periods = {
+        "day": 1,
+        "week": 7,
+        "month": 30,
+        "year": 365,
+    }
+
+    period_top_books_data = {}
+
+    for key, days in periods.items():
+        recent_cart_ids = Order.objects.filter(
+            ordered_at__gte=timezone.now() - timedelta(days=days)
+        ).values_list("cart_id", flat=True)
+
+        books = (
+            CartItem.objects
+            .filter(cart_id__in=recent_cart_ids)
+            .values("book__title")
+            .annotate(total_sold=Sum("quantity"))
+            .order_by("-total_sold")[:10]
+        )
+
+        period_top_books_data[key] = {
+            "labels": [book["book__title"] for book in books],
+            "data": [book["total_sold"] for book in books],
+        }
+        
 
     payment_methods = (
         Order.objects
@@ -319,13 +339,12 @@ def business_dashboard(request):
     top_books_labels = [book["book__title"] for book in top_books]
     top_books_data = [book["total_sold"] for book in top_books]
 
-    last_week_top_books_labels = [book["book__title"] for book in last_week_top_books]
-    last_week_top_books_data = [book["total_sold"] for book in last_week_top_books]
 
     payment_method_labels = [item["payment_method"] or "Unknown" for item in payment_methods]
     payment_method_data = [item["total"] for item in payment_methods]
 
     return render(request, "store/business_dashboard.html", {
+        "categories": categories,
         "total_orders": total_orders,
         "total_books_sold": total_books_sold,
         "revenue": revenue,
@@ -336,8 +355,7 @@ def business_dashboard(request):
         "format_data": json.dumps(format_data),
         "top_books_labels": json.dumps(top_books_labels),
         "top_books_data": json.dumps(top_books_data),
-        "last_week_top_books_labels": json.dumps(last_week_top_books_labels),
-        "last_week_top_books_data": json.dumps(last_week_top_books_data),
+        "period_top_books_data": json.dumps(period_top_books_data),
         "payment_method_labels": json.dumps(payment_method_labels),
         "payment_method_data": json.dumps(payment_method_data),
     })

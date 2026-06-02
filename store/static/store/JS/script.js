@@ -77,17 +77,33 @@ if (paymentMethodsChart) {
     });
 }
 
-const lastWeekTopBooksChart = document.getElementById('lastWeekTopBooksChart');
+const periodTopBooksChartCanvas = document.getElementById('periodTopBooksChart');
+const periodSelect = document.getElementById('periodSelect');
 
-if (lastWeekTopBooksChart) {
-    new Chart(lastWeekTopBooksChart, {
+if (periodTopBooksChartCanvas && periodSelect) {
+    const defaultPeriod = 'day';
+
+    const periodTopBooksChart = new Chart(periodTopBooksChartCanvas, {
         type: 'bar',
         data: {
-            labels: lastWeekTopBooksLabels,
+            labels: periodTopBooksDataByPeriod[defaultPeriod].labels,
             datasets: [{
                 label: 'Sold copies',
-                data: lastWeekTopBooksData
+                data: periodTopBooksDataByPeriod[defaultPeriod].data
             }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false
         }
+    });
+
+    periodSelect.addEventListener('change', function () {
+        const selectedPeriod = this.value;
+        const selectedData = periodTopBooksDataByPeriod[selectedPeriod];
+
+        periodTopBooksChart.data.labels = selectedData.labels;
+        periodTopBooksChart.data.datasets[0].data = selectedData.data;
+        periodTopBooksChart.update();
     });
 }

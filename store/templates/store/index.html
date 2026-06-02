@@ -36,7 +36,10 @@
         {% endif %}
 
         <a href="{% url 'book_detail' book.id %}"><button class="view-details-btn">View Details</button></a>
-        <a href="{% url 'add_to_cart' book.id %}"><button class="add-to-cart-btn">Add to Cart</button></a>
+        <form action="{% url 'add_to_cart' book.id %}" method="post">
+            {% csrf_token %}
+            <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+        </form>
     </div>
     {% endfor %}
 </div>
@@ -67,7 +70,10 @@
             {% endif %}
 
             <a href="{% url 'book_detail' book.id %}"><button class="view-details-btn">View Details</button></a>
-            <a href="{% url 'add_to_cart' book.id %}"><button class="add-to-cart-btn">Add to Cart</button></a>
+            <form action="{% url 'add_to_cart' book.id %}" method="post">
+                {% csrf_token %}
+                <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+            </form>
         </div>
     {% endfor %}
 </div>
@@ -91,7 +97,10 @@
             <p>Rating: {{ book.average_rating|default:"N/A" }}</p>
             <p>Sales: {{ book.sales_count }}</p>
             <a href="{% url 'book_detail' book.id %}"><button class="view-details-btn">View Details</button></a>
-            <a href="{% url 'add_to_cart' book.id %}"><button class="add-to-cart-btn">Add to Cart</button></a>
+            <form action="{% url 'add_to_cart' book.id %}" method="post">
+                {% csrf_token %}
+                <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+            </form>
         </div>
     {% empty %}
         <p>No popular books yet.</p>
@@ -115,7 +124,10 @@
         </p>
         <p>Price: <del>${{ book.price }}</del> <strong>${{ book.discount_price }}</strong></p>
             <a href="{% url 'book_detail' book.id %}"><button class="view-details-btn">View Details</button></a>
-            <a href="{% url 'add_to_cart' book.id %}"><button class="add-to-cart-btn">Add to Cart</button></a>
+            <form action="{% url 'add_to_cart' book.id %}" method="post">
+                {% csrf_token %}
+                <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+            </form>
     </div>
     {% endfor %}
 </div>

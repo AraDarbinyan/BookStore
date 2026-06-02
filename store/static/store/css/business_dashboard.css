@@ -58,3 +58,13 @@
         grid-template-columns: 1fr;
     }
 }
+ .period-select {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.bar-chart {
+    height: 420px;
+}
