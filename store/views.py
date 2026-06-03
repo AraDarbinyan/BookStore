@@ -1,6 +1,3 @@
-
-from urllib import request
-
 from django.shortcuts import render, redirect, get_object_or_404
 from .forms import RegisterForm, ReviewForm
 from django.db.models import Q, Count, Avg, Sum, F
@@ -20,19 +17,21 @@ from datetime import timedelta
 def index(request):
     books = Book.objects.all()[:14]
     categories = Category.objects.all()
+    best_sellers = Book.objects.annotate(sales_count=Count('cartitem')).order_by('-sales_count')[:7]
     new_books = Book.objects.all().order_by('-id')[:7]
     popular_books = Book.objects.annotate(
         sales_count=Count('cartitem'),
         avg_rating=Avg('reviews__rating')
-    ).filter(sales_count__gte=5).order_by('-avg_rating')[:6]
-    books_on_sale = Book.objects.filter(is_on_sale=True)[:6]
+    ).filter(sales_count__gte=5).order_by('-avg_rating')[:7]
+    books_on_sale = Book.objects.filter(is_on_sale=True)[:7]
     return render(request, 'store/index.html', {
         'books': books, 
         'categories': categories,
         'new_books': new_books,
         'popular_books': popular_books,
         'books_on_sale': books_on_sale,
-        })
+        'best_sellers': best_sellers
+    })
 
 
 def all_books_view(request):

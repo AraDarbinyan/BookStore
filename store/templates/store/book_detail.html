@@ -50,25 +50,6 @@
       {% endif %}
   </form>
 
-  
-  <!-- <div class="reviews-list">
-    <a href="{% url 'index' %}" class="btn-back">← Back to Home</a> <br> <br>
-    {% if user.is_authenticated %}
-      <a href="{% url 'add_review' book.id %}">Leave a review</a>
-    {% else %}
-      <p><a href="{% url 'login' %}">Log in</a> to leave a review.</p>
-    {% endif %}
-
-    <h3>Reviews:</h3>
-    {% for review in book.reviews.all %}
-        <div class="review">
-            <div class="review-rating">Rating: {{ review.rating }} / 5</div>
-            <p class="review-text">{{ review.text }}</p>
-        </div>
-    {% empty %}
-        <p>No reviews yet.</p>
-    {% endfor %}
-  </div> -->
     <a href="{% url 'index' %}" class="btn-back">← Back to Home</a> <br> <br>
     {% if user.is_authenticated %}
       <a href="{% url 'add_review' book.id %}">Leave a review</a>

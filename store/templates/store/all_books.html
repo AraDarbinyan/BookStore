@@ -19,6 +19,7 @@
         {% else %}
             <img src="{% static 'store/images/No_image_available.png' %}" alt="No image" class="book-cover">
         {% endif %}
+      <p>Rating: <strong> ⭐ {{ book.average_rating|default:"N/A" }}</strong></p>
       <h3>{{ book.title }}</h3>
       <p>
         Author:
@@ -27,9 +28,9 @@
         {% endfor %}
       </p>
       {% if book.is_on_sale and book.discount_price %}
-          <p>Price: <del>${{ book.price }}</del> <strong>${{ book.discount_price }}</strong></p>
+          <p class="sale-price">Price: <del>${{ book.price }}</del> <strong>${{ book.discount_price }}</strong></p>
       {% else %}
-          <p>Price: ${{ book.price }}</p>
+          <p class="sale-price">Price: ${{ book.price }}</p>
       {% endif %}
 
       <a href="{%url 'book_detail' book.id %}"><button class="view-details-btn">View Details</button></a>

@@ -89,7 +89,7 @@ del {
     margin-right: 10px;
 }
 
-strong {
+.sale-price strong {
     color: red;
     font-weight: bold;
 }
