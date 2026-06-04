@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .forms import RegisterForm, ReviewForm
+from .forms import RegisterForm, ReviewForm, ContactForm
+from django.core.mail import EmailMessage, send_mail
 from django.db.models import Q, Count, Avg, Sum, F
 from .models import Book, Cart, CartItem, Order, Category, Customer, Review, Author
 from django.contrib import messages
@@ -8,6 +9,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import AuthenticationForm
 from django.views.decorators.http import require_POST
 from django.contrib.admin.views.decorators import staff_member_required
+from django.conf import settings
 from django.utils import timezone
 
 import json
@@ -173,7 +175,24 @@ def about(request):
 
 def contact(request):
     categories = Category.objects.all()
-    return render(request, 'store/contact.html', {'categories': categories})
+    if request.method == "POST":
+        form = ContactForm(request.POST)
+
+        if form.is_valid():
+                email = EmailMessage(
+                    subject=form.cleaned_data["subject"],
+                    body=f"""Name: {form.cleaned_data["name"]}\nEmail: {form.cleaned_data["email"]}\n\nMessage:\n{form.cleaned_data["message"]}""",
+                    from_email=settings.DEFAULT_FROM_EMAIL,
+                    to=["aradarbinyan.2003@gmail.com"],
+                    reply_to=[form.cleaned_data["email"]],
+                )
+                email.send()
+
+        return redirect("contact")
+
+    else:
+        form = ContactForm()
+    return render(request, 'store/contact.html', {'categories': categories, 'form': form})
 
 
 def register_view(request):

@@ -39,3 +39,9 @@ class ReviewForm(forms.ModelForm):
             'rating': forms.RadioSelect(choices=[(i, str(i)) for i in range(1, 6)]),
             'text': forms.Textarea(attrs={'rows': 4, 'placeholder': 'Your review...'}),
         }
+
+class ContactForm(forms.Form):
+    name = forms.CharField(max_length=100)
+    email = forms.EmailField()
+    subject = forms.CharField(max_length=200)
+    message = forms.CharField(widget=forms.Textarea)
