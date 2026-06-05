@@ -17,7 +17,23 @@ from datetime import timedelta
 
 # Create your views here.
 def index(request):
-    books = Book.objects.all()[:14]
+    search_query = request.GET.get('q', '').strip()
+    category_id = request.GET.get('category')
+
+    if search_query:
+        books = books.filter(
+            Q(title__icontains=search_query) |
+            Q(description__icontains=search_query)
+        )
+
+        return redirect('all_books')  # Redirect to the all_books view with the search query as a parameter
+
+    elif category_id:
+        books = Book.objects.filter(categories__id=category_id)
+
+        return redirect('all_books')  # Redirect to the all_books view with the category filter as a parameter
+
+    books = Book.objects.all()
     categories = Category.objects.all()
     best_sellers = Book.objects.annotate(sales_count=Count('cartitem')).order_by('-sales_count')[:7]
     new_books = Book.objects.all().order_by('-id')[:7]
@@ -62,9 +78,25 @@ def all_books_view(request):
 
 
 def book_detail_view(request, pk):
+    search_query = request.GET.get('q', '').strip()
+    category_id = request.GET.get('category')
+
     book = get_object_or_404(Book, pk=pk)
     photos = book.photos.all()
     categories = Category.objects.all()
+    books = Book.objects.all()
+
+    if search_query:
+        books = books.filter(
+            Q(title__icontains=search_query) |
+            Q(description__icontains=search_query)
+        )
+        return redirect('all_books')  # Redirect to the all_books view with the search query as a parameter
+
+    elif category_id:
+        books = Book.objects.filter(categories__id=category_id)
+        return redirect('all_books')  # Redirect to the all_books view with the category filter as a parameter
+    
     return render(request, 'store/book_detail.html', {'book': book, 'photos': photos, 'categories': categories,})
 
 
@@ -265,9 +297,12 @@ def add_review(request, book_id):
 
 
 def authors_list(request):
-    authors = Author.objects.all()
+    authors = Author.objects.annotate(
+    books_count=Count('books')
+        )
+    authors_count = Author.objects.count()
     categories = Category.objects.all()
-    return render(request, 'store/authors_list.html', {'authors': authors, 'categories': categories})
+    return render(request, 'store/authors_list.html', {'authors': authors, 'authors_count': authors_count, 'categories': categories})
 
 
 def author_detail(request, author_id):

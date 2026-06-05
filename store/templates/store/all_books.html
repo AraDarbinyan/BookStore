@@ -9,7 +9,7 @@
 {% endblock %}
 
 {% block content %}
-<h2>All Books</h2>
+<h2>Our catalog</h2>
 
 <div class="book-grid">
   {% for book in books %}
@@ -24,7 +24,7 @@
       <p>
         Author:
         {% for author in book.authors.all %}
-          {{ author.name }}{% if not forloop.last %}, {% endif %}
+          <a href="{% url 'author_detail' author.id %}">{{ author.name }}{% if not forloop.last %}, {% endif %}</a>
         {% endfor %}
       </p>
       {% if book.is_on_sale and book.discount_price %}

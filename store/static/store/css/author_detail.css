@@ -1,54 +1,114 @@
 .author-container {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+.author-profile {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+
+    background: white;
     padding: 30px;
+    border-radius: 12px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    margin-bottom: 40px;
 }
 
-.author-header {
-    text-align: center;
-    margin-bottom: 20px;
+.author-photo {
+    width: 220px;
+    height: 300px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    flex-shrink: 0;
 }
 
-.author-header h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
+.author-info {
+    flex: 1;
 }
 
-.author-header p {
+.author-info h2 {
+    margin-bottom: 15px;
+    font-size: 36px;
+}
+
+.author-info p {
+    margin-bottom: 12px;
     color: #555;
-    font-size: 16px;
+    line-height: 1.7;
+}
+
+.author-meta {
+    margin-top: 20px;
+}
+
+.author-meta p {
+    color: #333;
+}
+
+.books-title {
+    margin-bottom: 25px;
 }
 
 .books-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+
+    grid-template-columns:
+        repeat(auto-fill, minmax(220px, 1fr));
+
+    gap: 25px;
 }
 
 .book-card {
-    background-color: #fff;
-    border: 1px solid #eee;
-    border-radius: 8px;
-    padding: 20px;
+    background: white;
+
+    border-radius: 10px;
+
+    padding: 15px;
+
     text-align: center;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    transition: 0.3s ease;
+
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
 }
 
 .book-card:hover {
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    transform: translateY(-2px);
+    transform: translateY(-4px);
+
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
 
-.book-card a {
-    color: #333;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.book-card img {
+.book-cover {
     width: 100%;
-    height: auto;
-    max-height: 250px;
+    height: 280px;
+
     object-fit: cover;
+
+    border-radius: 8px;
+
+    margin-bottom: 15px;
+}
+
+.book-card h4 {
+    margin-bottom: 10px;
+}
+
+.book-price {
+    font-weight: bold;
+    color: #007bff;
+
+    margin-bottom: 10px;
 }

@@ -10,11 +10,19 @@
 {% block content %}
 <div class="authors-container">
     <h2>Authors</h2>
+    <h3>{{ authors_count }} authors</h3>
     <div class="authors-grid">
         {% for author in authors %}
             <div class="author-card">
+                {% if author.photo %}
+                    <img src="{{ author.photo.url }}" alt="{{ author.name }}" class="author-photo">
+                {% else %}
+                    <img src="{% static 'store/images/default_author.png' %}" alt="No photo" class="author-photo">
+                {% endif %}
+                <br>
                 <a href="{% url 'author_detail' author.id %}">
                     {{ author.name }}
+                    <p>{{ author.books_count }} book{{ author.books_count|pluralize }}</p>  
                 </a>
             </div>
         {% endfor %}

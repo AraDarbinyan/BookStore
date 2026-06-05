@@ -17,6 +17,7 @@
                 <th>Book</th>
                 <th>Quantity</th>
                 <th>Price</th>
+                <th>Type</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -26,6 +27,7 @@
                     <td>{{ item.book.title }}</td>
                     <td>{{ item.quantity }}</td>
                     <td>${{ item.get_total_price }}</td>
+                    <td>{{ item.item_type }}</td>
                     <td><a href="{% url 'remove_from_cart' item.id %}" class="cart-remove">Remove</a></td>
                 </tr>
             {% endfor %}

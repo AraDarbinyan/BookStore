@@ -10,9 +10,28 @@
 
 {% block content %}
 <div class="author-container">
-    <div class="author-header">
-        <h2>{{ author.name }}</h2>
-        <p>{{ author.biography }}</p>
+    <a href="{% url 'authors_list' %}" class="back-link">← Back to all authors</a>
+    <div class="author-profile">
+        {% if author.photo %}
+            <img src="{{ author.photo.url }}" alt="{{ author.name }}" class="author-photo">
+        {% else %}
+            <img src="{% static 'store/images/default_author.png' %}" alt="No photo" class="author-photo">
+        {% endif %}
+
+        <div class="author-info">
+            <h2>{{ author.name }}</h2>
+            <p>{{ author.biography }}</p>
+
+            <div class="author-meta">
+                {% if author.date_of_birth %}
+                    <p><strong>Born:</strong> {{ author.date_of_birth }}</p>
+                {% endif %}
+
+                {% if author.date_of_death %}
+                    <p><strong>Died:</strong> {{ author.date_of_death }}</p>
+                {% endif %}
+            </div>
+        </div>
     </div>
 
     <h3>Books by {{ author.name }}</h3>
@@ -33,9 +52,6 @@
         {% endfor %}
     </div>
 
-    <p style="text-align:center; margin-top:20px;">
-        <a href="{% url 'authors_list' %}">Back to all authors</a>
-    </p>
 </div>
 
 {% endblock %}

@@ -12,39 +12,7 @@
   <h1>Welcome to Bookstore</h1>
   <p>Thousands of books from the best authors. Fiction, science and children's literature - all in one place.</p>
 </div>
-
-<!-- <h2>Catalog</h2>
-<div class="book-grid">
-    {% for book in books %}
-    <div class="book-card">
-        {% if book.photos.first %}
-            <img src="{{ book.photos.first.image.url }}" alt="{{ book.title }} cover" class="book-cover">
-        {% else %}
-            <img src="{% static 'store/images/No_image_available.png' %}" alt="No image" class="book-cover">
-        {% endif %}
-        <h3>{{ book.title }}</h3>
-        <p>Rating: {{ book.average_rating|default:"N/A" }}</p>
-
-        <p>Author:
-            {% for author in book.authors.all %}
-            {{ author.name }}{% if not forloop.last %}, {% endif %}
-            {% endfor %}</p>
-        {% if book.is_on_sale and book.discount_price %}
-            <p>Price: <del>${{ book.price }}</del> <strong>${{ book.discount_price }}</strong></p>
-        {% else %}
-            <p>Price: ${{ book.price }}</p>
-        {% endif %}
-
-        <a href="{% url 'book_detail' book.id %}"><button class="view-details-btn">View Details</button></a>
-        <form action="{% url 'add_to_cart' book.id %}" method="post">
-            {% csrf_token %}
-            <button type="submit" class="add-to-cart-btn">Add to Cart</button>
-        </form>
-    </div>
-    {% endfor %}
-</div>
-
-<div style="text-align: center; margin-top: 30px;">
+<!-- <div style="text-align: center; margin: 30px 0;">
     <a href="{% url 'all_books' %}" class="btn-show-all">Show All Books</a>
 </div> -->
 <h2>⭐ Top Rated</h2>
@@ -60,7 +28,7 @@
             <h3>{{ book.title }}</h3>
             <p>Author:
                 {% for author in book.authors.all %}
-                    {{ author.name }}{% if not forloop.last %}, {% endif %}
+                    <a href="{% url 'author_detail' author.id %}">{{ author.name }}</a>{% if not forloop.last %}, {% endif %}
                 {% endfor %}
             </p>
             {% if book.is_on_sale and book.discount_price %}
@@ -93,7 +61,7 @@
             <h3>{{ book.title }}</h3>
             <p>Author:
                 {% for author in book.authors.all %}
-                    {{ author.name }}{% if not forloop.last %}, {% endif %}
+                    <a href="{% url 'author_detail' author.id %}">{{ author.name }}</a>{% if not forloop.last %}, {% endif %}
                 {% endfor %}
             </p>
             {% if book.is_on_sale and book.discount_price %}
@@ -124,7 +92,7 @@
             <h3>{{ book.title }}</h3>
             <p>Author:
                 {% for author in book.authors.all %}
-                    {{ author.name }}{% if not forloop.last %}, {% endif %}
+                    <a href="{% url 'author_detail' author.id %}">{{ author.name }}</a>{% if not forloop.last %}, {% endif %}
                 {% endfor %}
             </p>
             {% if book.is_on_sale and book.discount_price %}
@@ -156,7 +124,7 @@
         <h3>{{ book.title }}</h3>
         <p>Author:
             {% for author in book.authors.all %}
-                {{ author.name }}{% if not forloop.last %}, {% endif %}
+                <a href="{% url 'author_detail' author.id %}">{{ author.name }}</a>{% if not forloop.last %}, {% endif %}
             {% endfor %}
         </p>
         <p class="sale-price">Price: <del>${{ book.price }}</del> <strong>${{ book.discount_price }}</strong></p>
